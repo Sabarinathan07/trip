@@ -1,182 +1,575 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Singapore & Malaysia Family Trip — Oct 16–26, 2026</title>
+<meta name="description" content="11-day family itinerary for 8 travellers: Singapore, a Genting Dream cruise and Kuala Lumpur, 16–26 October 2026.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
 <style>
+:root{--dark:#0F2A3C;--light:#F6EFE3;--coral:#E2714A;--gold:#D9A441;--mute:#4A5A66;--pale:#C9D6DC;--panel:#1C4258;--line:#E3D9C8;--stripe:#F3EBDD;--green:#3E8E6A}
 *{box-sizing:border-box;margin:0}
-html,body{height:100%;background:#0a1c29;font-family:'DM Sans',Arial,sans-serif;overflow:hidden}
-#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0}
-section{position:absolute;inset:0;padding:112px 128px;display:none;color:#0F2A3C;background:#F6EFE3}
-section.active{display:flex;flex-direction:column;gap:32px}
-section.dark{background:#0F2A3C;color:#F6EFE3}
-section.accent{background:#E2714A;color:#F6EFE3;justify-content:center;gap:40px}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.08}
-h1{font-size:112px} h2{font-size:68px} h2.big{font-size:92px;max-width:1500px} h3{font-size:32px}
-.eyebrow{font-size:22px;letter-spacing:4px;color:#E2714A;font-weight:600} .gold{color:#D9A441} .light-eb{color:#F6EFE3}
-.lead{font-size:30px;line-height:1.45;max-width:1300px} .dark .lead{color:#C9D6DC}
-.small{font-size:22px;color:#C9D6DC} .mute{color:#4A5A66;font-size:24px;line-height:1.45} .dark .mute{color:#C9D6DC}
-.cover,.day{flex-direction:row!important;gap:64px!important}
-.col{flex:1;display:flex;flex-direction:column;gap:26px} .cover .col{justify-content:space-between}
-.day ul{padding-left:34px;display:flex;flex-direction:column;gap:12px} .day li{font-size:27px;line-height:1.42}
-.tip{margin-top:auto;background:#E2714A;color:#F6EFE3;padding:18px 26px;border-radius:14px;font-size:23px;line-height:1.4}
-figure.photo{width:680px;flex:none;display:flex;flex-direction:column;gap:10px}
-figure.photo .ph,figure.tile .ph{position:relative;width:100%;border-radius:24px;overflow:hidden;background:#1C4258;display:flex;align-items:center;justify-content:center}
-figure.photo .ph{height:760px} figure.tile .ph{height:300px;border-radius:18px}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--light);color:var(--dark);font-family:'DM Sans',Arial,sans-serif;font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:var(--coral)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.12}
+h1{font-size:clamp(44px,7vw,84px)} h2{font-size:clamp(30px,4vw,46px)} h3{font-size:22px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:13px;letter-spacing:3px;color:var(--coral);font-weight:700;text-transform:uppercase}
+.gold{color:var(--gold)}
+.lead{font-size:20px;max-width:720px}
+.mute{color:var(--mute)}
+.small{font-size:14px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(15,42,60,.96);backdrop-filter:blur(6px);color:var(--light)}
+header .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.brand{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:600;white-space:nowrap;color:var(--light);text-decoration:none}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--pale);text-decoration:none;font-size:15px;font-weight:500;padding:8px 12px;border-radius:999px;white-space:nowrap}
+nav a:hover,nav a.on{background:var(--panel);color:var(--light)}
+
+/* sections */
+section{padding:80px 0}
+section.dark{background:var(--dark);color:var(--light)}
+section.dark .mute{color:var(--pale)}
+.head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+
+/* hero */
+.hero{padding:64px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero .txt{display:flex;flex-direction:column;gap:22px}
+.hero .lead{color:var(--pale)}
+.route{font-size:15px;color:var(--pale)}
+.count{display:flex;gap:14px;flex-wrap:wrap}
+.count div{background:var(--panel);border-radius:14px;padding:14px 20px;min-width:120px}
+.count b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:34px;color:var(--gold);line-height:1.1}
+.count span{font-size:13px;color:var(--pale);letter-spacing:1px;text-transform:uppercase}
+
+/* photos */
+.ph{position:relative;border-radius:20px;overflow:hidden;background:var(--panel);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ph span{color:#C9D6DC;font-size:26px;text-align:center;padding:24px}
-figcaption{font-size:18px;color:#4A5A66} .dark figcaption{color:#C9D6DC} figcaption a{color:inherit}
-table{width:100%;border-collapse:collapse;font-size:25px;background:#fff;border-radius:16px;overflow:hidden}
-th{background:#0F2A3C;color:#F6EFE3;text-align:left;padding:14px 24px;font-size:21px;letter-spacing:2px;text-transform:uppercase}
-td{padding:12px 24px;border-top:1px solid #E3D9C8;line-height:1.4} tr:nth-child(odd) td{background:#F3EBDD}
-.coral{color:#E2714A}
-.cards{display:flex;gap:28px;flex:1} .card{flex:1;background:#fff;border:1px solid #E3D9C8;border-radius:20px;padding:34px;display:flex;flex-direction:column;gap:16px}
-.play{margin-top:auto;border-top:2px solid #D9A441;padding-top:14px;font-size:23px;line-height:1.45}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px} .check{display:flex;gap:22px;background:#1C4258;padding:26px 30px;border-radius:16px}
-.check p{font-size:23px;line-height:1.4;color:#C9D6DC;margin-top:6px} .tick{color:#D9A441;font-size:40px;line-height:1}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;flex:1} figure.tile{display:flex;flex-direction:column;gap:10px} figure.tile figcaption{font-size:24px;color:#F6EFE3}
-.credit{font-size:20px;color:#4A5A66;margin-top:auto} .dark .credit{color:#C9D6DC}
-#nav{position:fixed;left:0;right:0;bottom:14px;text-align:center;color:#C9D6DC;font-size:14px;font-family:Arial,sans-serif}
-/* Mobile: drop the scaled 1920×1080 stage and stack every slide as a scrolling page. */
-@media (max-width:900px),(max-height:520px){
-html,body{height:auto;overflow:auto}
-#stage{position:static;width:auto;height:auto;transform:none!important}
-section,section.active{position:relative;display:flex;flex-direction:column;gap:18px;padding:44px 16px}
-section.accent{gap:20px;padding:56px 16px}
-.cover,.day{flex-direction:column!important;gap:20px!important}
-.cover figure.photo,.day figure.photo{order:-1}
-h1{font-size:46px} h2{font-size:31px} h2.big{font-size:33px} h3{font-size:20px}
-.eyebrow{font-size:13px;letter-spacing:2px}
-.lead{font-size:17px} .small{font-size:14px} .mute{font-size:15px}
-.col{gap:16px}
-.day ul{padding-left:20px;gap:8px} .day li{font-size:16px}
-.tip{margin-top:4px;padding:12px 16px;border-radius:12px;font-size:15px}
-figure.photo{width:100%;gap:6px}
-figure.photo .ph{height:auto;aspect-ratio:4/3;border-radius:16px}
-figure.tile .ph{height:auto;aspect-ratio:4/3;border-radius:12px}
-.ph span{font-size:16px}
-figcaption{font-size:12px} figure.tile figcaption{font-size:14px}
-table{font-size:14px;border-radius:12px} th{padding:9px 10px;font-size:11px;letter-spacing:1px} td{padding:8px 10px}
-.cards{flex-direction:column;gap:14px} .card{padding:20px;gap:10px;border-radius:16px} .play{font-size:15px;padding-top:10px}
-.grid2{grid-template-columns:1fr;gap:12px} .check{gap:14px;padding:16px 18px;border-radius:12px}
-.check p{font-size:15px} .tick{font-size:26px}
-.grid4{grid-template-columns:1fr 1fr;gap:14px}
-.credit{font-size:13px;margin-top:4px}
-#nav{display:none}
+.ph span{color:var(--pale);padding:16px;text-align:center}
+.hero .ph{aspect-ratio:4/5}
+figure{display:flex;flex-direction:column;gap:8px}
+figcaption{font-size:12px;color:var(--mute)} .dark figcaption{color:var(--pale)} figcaption a{color:inherit}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gallery .ph{border-radius:14px}
+.gallery figcaption{font-size:15px;color:var(--dark)}
+
+/* tables */
+.table{overflow-x:auto;border-radius:14px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+table{width:100%;border-collapse:collapse}
+th{background:var(--dark);color:var(--light);text-align:left;padding:12px 18px;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+td{padding:12px 18px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(odd) td{background:var(--stripe)}
+td.coral{color:var(--coral);font-weight:700}
+td a.btn{margin:2px 4px 2px 0}
+
+/* to-do */
+.progress{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.bar{flex:1;height:10px;background:var(--panel);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+.progress b{font-size:15px;white-space:nowrap}
+.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.group{background:var(--panel);border-radius:18px;padding:22px 22px 14px}
+.group h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:21px;margin-bottom:6px}
+.due{font-family:'DM Sans',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#2A5670;color:var(--pale)}
+.due.soon{background:var(--coral);color:#fff} .due.over{background:#B8432A;color:#fff} .due.done{background:var(--green);color:#fff}
+.todo{list-style:none;padding:0}
+.todo li{border-top:1px solid #2A5670}
+.todo li:first-child{border-top:0}
+.todo label{display:flex;gap:14px;align-items:flex-start;padding:12px 0;cursor:pointer}
+.todo input{appearance:none;flex:none;width:22px;height:22px;margin-top:2px;border:2px solid var(--gold);border-radius:6px;cursor:pointer;display:grid;place-content:center}
+.todo input:checked{background:var(--gold)}
+.todo input:checked::after{content:"✓";color:var(--dark);font-weight:700;font-size:15px}
+.todo .t{display:flex;flex-direction:column;gap:2px}
+.todo .t small{color:var(--pale);font-size:14px}
+.todo .t a{color:var(--gold);font-weight:600}
+.todo li.done .t>span{text-decoration:line-through;opacity:.55}
+.reset{margin-top:18px;background:none;border:0;color:var(--pale);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
+
+/* days */
+.days{display:flex;flex-direction:column;gap:28px}
+.day{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;background:#fff;border-radius:24px;padding:28px;box-shadow:0 0 0 1px var(--line)}
+.day:nth-child(even) figure{order:2}
+.day .txt{display:flex;flex-direction:column;gap:14px}
+.day h3{font-size:30px}
+.day ul{padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--mute);border-top:1px solid var(--line);padding-top:12px}
+.meta b{color:var(--dark)}
+.tip{background:var(--coral);color:var(--light);padding:14px 18px;border-radius:12px;font-size:15px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cards.four{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.dark .card{background:var(--panel);border-color:#2A5670}
+.play{margin-top:auto;border-top:2px solid var(--gold);padding-top:12px;font-size:15px}
+.sub{margin:48px 0 20px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+a.btn{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600}
+a.btn.ghost{background:transparent;color:var(--coral);box-shadow:inset 0 0 0 2px var(--coral)}
+.note{font-size:14px;color:var(--mute);margin-top:18px} .dark .note{color:var(--pale)}
+
+/* good to know */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.check{background:var(--panel);color:var(--light);border-radius:16px;padding:20px 22px}
+.check p{color:var(--pale);font-size:15px;margin-top:6px}
+
+.profile{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.pf{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.pf b{display:block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--coral);margin-bottom:4px}
+.pf.ask{border-style:dashed;border-color:var(--coral)}
+.pf.ask b::after{content:" · to confirm";color:var(--mute);letter-spacing:1px}
+tr.total td{background:var(--dark)!important;color:var(--light);font-weight:700}
+td.num{white-space:nowrap;text-align:right}
+.pack{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.light-list .group{background:#fff;border:1px solid var(--line)}
+.light-list .todo li{border-color:var(--line)}
+.light-list .todo .t small{color:var(--mute)}
+.light-list .todo input:checked::after{color:#fff}
+.light-list .todo input{border-color:var(--coral)} .light-list .todo input:checked{background:var(--coral)}
+.light-list .bar{background:var(--line)} .light-list .bar i{background:var(--coral)}
+.etq{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.etq ul{padding-left:20px;display:flex;flex-direction:column;gap:8px;color:var(--pale)}
+.etq b{color:var(--light)}
+footer{background:var(--coral);color:var(--light);padding:72px 0}
+footer .wrap{display:flex;flex-direction:column;gap:18px}
+footer .lead{max-width:860px}
+footer .small{opacity:.85}
+
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  section{padding:56px 0}
+  .hero{padding:36px 0 56px}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero .ph{aspect-ratio:4/3}
+  .hero figure{order:-1}
+  .count{gap:8px;flex-wrap:nowrap}
+  .count div{min-width:0;flex:1;padding:12px 14px}
+  .count b{font-size:28px}
+  .count span{font-size:11px}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+  .groups,.cards,.cards.four,.grid3,.pack,.etq{grid-template-columns:1fr}
+  .profile{grid-template-columns:1fr 1fr}
+  .day{grid-template-columns:1fr;gap:18px;padding:16px;border-radius:18px}
+  .day:nth-child(even) figure{order:0}
+  .day h3{font-size:25px}
+  th,td{padding:10px 12px;font-size:14px}
+  .brand{font-size:17px}
+  header .wrap{gap:12px}
 }
 </style></head><body>
-<div id="stage"><section class="dark cover">
-<div class="col">
-<p class="eyebrow gold">16 – 26 OCTOBER 2026 · 8 TRAVELLERS</p>
-<div><h1>Singapore &amp;<br>Malaysia</h1>
-<p class="lead">An 11-day family itinerary: Marina Bay, a Genting Dream cruise, Batu Caves, the Petronas Towers, Universal Studios and Sentosa — with transport, timings, dining and Visa perks built in.</p></div>
-<p class="small">Chennai → Singapore → Kuala Lumpur → Singapore → Chennai</p>
+
+<header><div class="wrap"><a class="brand" href="#top">SG · MY 2026</a>
+<nav><a href="#glance">Plan</a><a href="#booked">Booked</a><a href="#todo">To-do</a><a href="#days">Days</a><a href="#stay">Stay</a><a href="#rides">Rides</a><a href="#budget">Budget</a><a href="#packing">Packing</a><a href="#perks">Visa perks</a><a href="#food">Food</a><a href="#etiquette">Etiquette</a></nav></div></header>
+
+<section class="dark hero" id="top"><div class="wrap">
+<div class="txt">
+<p class="eyebrow gold">16 – 26 October 2026 · 8 adults</p>
+<h1>Singapore &amp;<br>Malaysia</h1>
+<p class="lead">An 11-day family itinerary: Marina Bay, a Genting Dream cruise, Batu Caves, the Petronas Towers, Universal Studios and Sentosa — with transport, timings, dining and Visa perks built in.</p>
+<div class="count"><div><b id="cd-days">—</b><span>days to go</span></div><div><b id="cd-todo">—</b><span>to-dos left</span></div><div><b>11</b><span>days of travel</span></div></div>
+<p class="route">Chennai → Singapore → cruise → Kuala Lumpur → Singapore → Chennai</p>
 </div>
-<figure class="photo" data-wiki="Marina_Bay_Sands"><div class="ph"><span>Marina Bay Sands</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Marina_Bay_Sands" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light"><h2>The trip at a glance</h2><table><tr><th>Date</th><th>Plan</th><th>Sleep</th></tr><tr><td><b>Fri 16</b></td><td>Chennai → Singapore (14:20 → 21:20)</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Sat 17</b></td><td>Marina Bay &amp; Gardens by the Bay</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Sun 18</b></td><td>Chinatown, board Genting Dream</td><td class="mute">Cruise</td></tr><tr><td><b>Mon 19</b></td><td>Port Klang → Batu Caves → Jalan Alor</td><td class="mute">KL apartment</td></tr><tr><td><b>Tue 20</b></td><td>Petronas Towers, KLCC &amp; Pavilion</td><td class="mute">KL apartment</td></tr><tr><td><b>Wed 21</b></td><td>Private van KL → Singapore</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Thu 22</b></td><td>Universal Studios Singapore</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Fri 23</b></td><td>Sentosa Island &amp; Wings of Time</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Sat 24</b></td><td>Singapore Zoo &amp; Night Safari</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Sun 25</b></td><td>Little India, Orchard Road, river dinner</td><td class="mute">Aunt's house, SG</td></tr><tr><td><b>Mon 26</b></td><td>Jewel Changi → fly 21:00</td><td class="mute">—</td></tr></table></section><section class="dark"><h2>What we're going to see</h2><div class="grid4"><figure class="tile" data-wiki="Marina_Bay_Sands"><div class="ph"><span>Marina Bay</span></div><figcaption>Marina Bay</figcaption></figure><figure class="tile" data-wiki="Gardens_by_the_Bay"><div class="ph"><span>Gardens by the Bay</span></div><figcaption>Gardens by the Bay</figcaption></figure><figure class="tile" data-wiki="Batu_Caves"><div class="ph"><span>Batu Caves</span></div><figcaption>Batu Caves</figcaption></figure><figure class="tile"><div class="ph"><span>Petronas Towers</span><img src="images/petronas-towers.jpg" alt="Petronas Twin Towers at night" onerror="this.remove()"></div><figcaption>Petronas Towers</figcaption></figure><figure class="tile" data-wiki="Universal_Studios_Singapore"><div class="ph"><span>Universal Studios</span></div><figcaption>Universal Studios</figcaption></figure><figure class="tile" data-wiki="Sentosa"><div class="ph"><span>Sentosa</span></div><figcaption>Sentosa</figcaption></figure><figure class="tile" data-wiki="Singapore_Zoo"><div class="ph"><span>Singapore Zoo</span></div><figcaption>Singapore Zoo</figcaption></figure><figure class="tile"><div class="ph"><span>Jewel Changi</span><img src="images/jewel-changi.jpg" alt="Rain Vortex at Jewel Changi" onerror="this.remove()"></div><figcaption>Jewel Changi</figcaption></figure></div><p class="credit">Photos: Wikipedia / Wikimedia Commons, Creative Commons licences.</p></section><section class="light"><h2>Your Visa perks, checked for these dates</h2><div class="cards"><div class="card"><h3>Pelago · VISASG15</h3><p class="mute">15% off Singapore activities, capped at SGD 15 per booking, new users only. Valid to 30 Nov 2026.</p><p class="play"><b>Play it:</b> Have several family members open their own Pelago account and book 1–2 Universal Studios tickets each — every booking gets its own SGD 15 cap.</p></div><div class="card"><h3>Sentosa Discovery Choice Pass</h3><p class="mute">One complimentary Sentosa attraction worth up to SGD 55 per Visa card. Valid to 31 Mar 2027.</p><p class="play"><b>Play it:</b> Redeem online in advance. Every adult with their own Visa card picks Wings of Time — the whole group sees the show free.</p></div><div class="card"><h3>Dine &amp; Save with Visa</h3><p class="mute">Up to 20% off the bill at participating restaurants in Singapore and Malaysia. Valid to 31 Oct 2026.</p><p class="play"><b>Play it:</b> Check dineandsave.visa.com/listing before booking each premium dinner; quote the offer when paying.</p></div><div class="card"><h3>Din Tai Fung RM 20 off</h3><p class="mute">Was Johor Bahru outlets only and ended 15 Sep 2026 — not usable in KL on this trip.</p><p class="play"><b>Play it:</b> Din Tai Fung at Pavilion KL stays on the plan as a lunch option, just at full price.</p></div></section><section class="dark"><h2>Before you fly</h2><div class="grid2"><div class="check"><span class="tick">✓</span><div><h3>Singapore Arrival Card</h3><p>All 8 travellers, within 3 days before Oct 16 — and again before Oct 21.</p></div></div><div class="check"><span class="tick">✓</span><div><h3>Malaysia Digital Arrival Card</h3><p>Within 3 days before Oct 19. Cruise disembarkation counts as an entry.</p></div></div><div class="check"><span class="tick">✓</span><div><h3>Book now</h3><p>Universal Studios (Pelago), Petronas Skybridge, Night Safari first tram, Wings of Time, KL apartment, Port Klang van.</p></div></div><div class="check"><span class="tick">✓</span><div><h3>Group transport</h3><p>Grab fits 4–6; plan two cars or pre-book a 13-seater maxi-cab for airport and cruise transfers (~SGD 65–80).</p></div></div><div class="check"><span class="tick">✓</span><div><h3>Payments</h3><p>Visa contactless taps onto Singapore MRT and buses; Touch &#x27;n Go eWallet for KL hawkers.</p></div></div><div class="check"><span class="tick">✓</span><div><h3>Weather</h3><p>October brings afternoon thunderstorms — indoor stops are placed in the heat window.</p></div></div></div></section><section class="light day">
-<div class="col">
-<p class="eyebrow">FRI 16 OCT · CHENNAI → SINGAPORE</p>
-<h2>Arrive and settle in</h2>
-<ul><li>14:20 depart Chennai; land Changi 21:20 (+2.5 hrs time change)</li><li>Immigration and bags ~45 min — have Arrival Card QR codes ready</li><li>Pre-booked maxi-cab to your aunt&#x27;s home (Grab can&#x27;t guarantee 8 seats late)</li><li>Late supper if needed: Springleaf Prata or Al-Azhar, both open 24 hours</li></ul>
-<div class="tip"><b>Tip</b> · Download Grab and SimplyGo before landing; SIM or eSIM at the Changi arrival counters.</div>
+<figure data-wiki="Marina_Bay_Sands"><div class="ph"><span>Marina Bay Sands</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Marina_Bay_Sands" target="_blank" rel="noopener">source</a></figcaption></figure>
+</div></section>
+
+<section id="glance"><div class="wrap">
+<div class="head"><p class="eyebrow">Overview</p><h2>The trip at a glance</h2></div>
+<div class="table"><table><tr><th>Date</th><th>Plan</th><th>Sleep</th></tr>
+<tr><td><b>Fri 16</b></td><td><a href="#d16">IndiGo 6E 1343 Chennai → Singapore (14:20 → 21:20)</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Sat 17</b></td><td><a href="#d17">Marina Bay &amp; Gardens by the Bay</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Sun 18</b></td><td><a href="#d18">Chinatown, board Genting Dream</a></td><td class="mute">Cruise</td></tr>
+<tr><td><b>Mon 19</b></td><td><a href="#d19">Self-drive: Port Klang → Batu Caves → KL</a></td><td class="mute">KL Airbnb</td></tr>
+<tr><td><b>Tue 20</b></td><td><a href="#d20">Petronas Towers, KLCC &amp; Pavilion</a></td><td class="mute">KL Airbnb</td></tr>
+<tr><td><b>Wed 21</b></td><td><a href="#d21">Van with driver KL → Singapore</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Thu 22</b></td><td><a href="#d22">Universal Studios Singapore</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Fri 23</b></td><td><a href="#d23">Sentosa Island &amp; Wings of Time</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Sat 24</b></td><td><a href="#d24">Singapore Zoo &amp; Night Safari</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Sun 25</b></td><td><a href="#d25">Little India, Orchard Road, river dinner</a></td><td class="mute">Aunt's house, SG</td></tr>
+<tr><td><b>Mon 26</b></td><td><a href="#d26">Jewel Changi → IX 629 home 21:00</a></td><td class="mute">—</td></tr>
+</table></div>
+<h3 class="sub" id="profile">Traveller profile</h3>
+<div class="profile">
+<div class="pf"><b>Group</b>8 adults from Chennai: Sabarinathan, Saranyadevi, Senbagaselvi, Ragunathan, Srinivasan, Mamatha, Swetha, Sandeep</div>
+<div class="pf"><b>Style</b>Landmarks + theme parks, relaxed mornings, one premium dinner most days</div>
+<div class="pf"><b>Base</b>Aunt's home in Singapore; one Airbnb in KL</div>
+<div class="pf"><b>Payments</b>Visa cards — perks planned in (Pelago, Sentosa, Dine &amp; Save)</div>
+<div class="pf"><b>Food</b>Everyone eats non-veg — chilli crab, satay, nasi lemak and bak kut teh are all on</div>
+<div class="pf"><b>Tickets</b>All 8 are adults, so every attraction is priced at the adult rate</div>
+<div class="pf"><b>Baggage</b>30 kg check-in + 7 kg cabin each, both flights</div>
+<div class="pf"><b>Mobility</b>Everyone can do the 272 steps at Batu Caves</div>
+<div class="pf"><b>Visas</b>All 8 hold Singapore visas; Malaysia is visa-free</div>
+<div class="pf"><b>Drivers</b>3 travellers hold International Driving Permits — self-drive in Malaysia</div>
 </div>
-<figure class="photo"><div class="ph"><span>Changi Airport</span><img src="images/changi-airport.jpg" alt="Changi Airport control tower and Jewel" onerror="this.remove()"></div><figcaption>Photo: LN9267 / Wikimedia Commons, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Jewel_Changi_Airport_13-11-2023(1).jpg" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">SAT 17 OCT · SINGAPORE</p>
-<h2>Marina Bay from morning to lights</h2>
+</div></section>
+
+<section id="booked" style="background:var(--stripe)"><div class="wrap">
+<div class="head"><p class="eyebrow">Confirmed</p><h2>Already booked</h2><p class="mute">From the booking PDFs. PNRs and booking numbers are kept off this page on purpose — find them in the email confirmations.</p></div>
+<div class="cards">
+<div class="card"><p class="eyebrow">Fri 16 Oct · Outbound</p><h3>IndiGo 6E 1343</h3><p><b>Chennai T2 14:20 → Changi T2 21:20</b><br><span class="mute">A321 · 4 h 30 m · all 8 on one booking</span></p><p class="mute">Check-in closes <b>13:05</b>. No web check-in for international group bookings — reach the airport by 11:30.</p><p class="play">30 kg check-in + 7 kg cabin (115 cm) each · paid ₹1,58,968</p></div>
+<div class="card"><p class="eyebrow">Sun 18 → Mon 19 Oct · Cruise</p><h3>Genting Dream, 2D1N</h3><p><b>Marina Bay Cruise Centre → Port Klang</b><br><span class="mute">3 Balcony Deluxe staterooms · cabin numbers assigned later</span></p><p class="mute">Cabin 1: Sabarinathan, Senbagaselvi, Ragunathan<br>Cabin 2: Srinivasan, Mamatha, Swetha<br>Cabin 3: Sandeep, Saranyadevi</p><p class="play">Via Trip.com · 50% cancellation fee · paid ₹56,186 incl. port fees</p></div>
+<div class="card"><p class="eyebrow">Mon 26 Oct · Return</p><h3>Air India Express IX 629</h3><p><b>Changi T2 21:00 → Chennai T2 22:40</b><br><span class="mute">4 h 10 m · counters open 18:00, close 20:00</span></p><p class="mute">On this booking: Srinivasan, Mamatha, Sandeep, Saranyadevi, Swetha, Sabarinathan. <b style="color:var(--coral)">Senbagaselvi and Ragunathan are not on it</b> — confirm their return.</p><p class="play">30 kg check-in + 7 kg cabin each · paid ₹1,27,566</p></div>
+</div>
+</div></section>
+
+<section class="dark" id="todo"><div class="wrap">
+<div class="head"><p class="eyebrow gold">Before we go</p><h2>To-do list, with deadlines</h2><p class="mute">Tick items off as they're done. Ticks are saved in this browser only, so one person should keep the master list.</p></div>
+<div class="progress"><div class="bar"><i id="bar"></i></div><b id="prog">0 / 0 done</b></div>
+<div class="groups">
+
+<div class="group" data-due="2026-10-07"><h3>This week <span class="due"></span></h3><ul class="todo">
+<li><label><input type="checkbox" data-id="sgvisa"><span class="t"><span>Singapore visas: all 8 issued — check each allows re-entry on Oct 21</span><small>Look for "multiple journey" on the e-Visa printout</small></span></label></li>
+<li><label><input type="checkbox" data-id="return2"><span class="t"><span>Book or confirm the return flight for Senbagaselvi and Ragunathan</span><small>They aren't on the IX 629 booking · <a href="#booked">details</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="airbnb"><span class="t"><span>Book the Airbnb in KL for Oct 19–21</span><small>3–4 bedrooms near KLCC, with parking for a ~2 m tall van · <a href="#stay">options</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="skybridge"><span class="t"><span>Book Petronas Skybridge, Tue 20 Oct 09:00 slot</span><small>8 tickets · <a href="https://www.petronastwintowers.com.my/" target="_blank" rel="noopener">official site</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="safari"><span class="t"><span>Book Night Safari first tram, Sat 24 Oct 19:15</span><small>Saturdays sell out · <a href="https://www.mandai.com/en/night-safari.html" target="_blank" rel="noopener">Mandai</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="klvan"><span class="t"><span>Book a self-drive 9-seat van (Hyundai Staria / Starex), Oct 19 → Oct 21 morning</span><small>Delivered to Port Klang cruise terminal, collected from the Airbnb; add all 3 drivers · <a href="#drive">driving plan</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="klsg"><span class="t"><span>Book KL → Singapore van with driver, Wed 21 Oct 08:00</span><small><a href="#rides">rides</a></small></span></label></li>
+</ul></div>
+
+<div class="group" data-due="2026-10-10"><h3>By Sat 10 Oct <span class="due"></span></h3><ul class="todo">
+<li><label><input type="checkbox" data-id="uss"><span class="t"><span>Buy Universal Studios tickets for Thu 22 Oct</span><small>Pelago code VISASG15, split across new accounts · <a href="https://pelago.com/en-SG/activity/pok40" target="_blank" rel="noopener">Pelago</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="sentosa"><span class="t"><span>Redeem Sentosa Discovery Choice Pass → Wings of Time, Fri 23 Oct</span><small>One per Visa card · <a href="https://www.sentosa.com.sg/en/things-to-do/attractions/wings-of-time/" target="_blank" rel="noopener">Wings of Time</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="changi-in"><span class="t"><span>Book 13-seater pickup, Changi Fri 16 Oct 21:20</span><small><a href="https://www.changirecommends.com/deal.aspx?id=37060" target="_blank" rel="noopener">Changi Recommends</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="cruise-ride"><span class="t"><span>Book ride to Marina Bay Cruise Centre, Sun 18 Oct ~13:00</span><small><a href="https://www.bookmaxicab.com/" target="_blank" rel="noopener">BookMaxicab</a> or plan two Grabs</small></span></label></li>
+</ul></div>
+
+<div class="group" data-due="2026-10-12"><h3>By Mon 12 Oct <span class="due"></span></h3><ul class="todo">
+<li><label><input type="checkbox" data-id="dinners"><span class="t"><span>Reserve dinner tables for 8</span><small>Marini's on 57 · Tanjong Beach Club · Candlenut · Jumbo — check <a href="https://dineandsave.visa.com/listing/" target="_blank" rel="noopener">Dine &amp; Save</a> first</small></span></label></li>
+<li><label><input type="checkbox" data-id="changi-out"><span class="t"><span>Book 13-seater drop-off to Changi, Mon 26 Oct ~13:30</span><small><a href="https://www.bookmaxicab.com/" target="_blank" rel="noopener">BookMaxicab</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="cruise-check"><span class="t"><span>Confirm Genting Dream boarding window and e-tickets</span><small>Aim for the start of the window</small></span></label></li>
+<li><label><input type="checkbox" data-id="flight"><span class="t"><span>Web check-in for IX 629 (opens 12 Oct, 14 days before)</span><small><a href="https://www.airindiaexpress.com/" target="_blank" rel="noopener">airindiaexpress.com</a> · pre-book hot meals at least 18 hrs before</small></span></label></li>
+</ul></div>
+
+<div class="group" data-due="2026-10-15"><h3>Oct 13 – 15 <span class="due"></span></h3><ul class="todo">
+<li><label><input type="checkbox" data-id="sgac1"><span class="t"><span>Singapore Arrival Card for all 8</span><small>Opens 3 days before arrival · <a href="https://eservices.ica.gov.sg/arrivalcard" target="_blank" rel="noopener">ICA official</a></small></span></label></li>
+<li><label><input type="checkbox" data-id="apps"><span class="t"><span>Install Grab, SimplyGo and Touch 'n Go; buy eSIMs; download offline maps</span></span></label></li>
+<li><label><input type="checkbox" data-id="idp"><span class="t"><span>Drivers: check the 3 IDPs are valid through Oct 21</span><small>Carry Indian licence + IDP + passport; main driver's credit card for the deposit</small></span></label></li>
+<li><label><input type="checkbox" data-id="bank"><span class="t"><span>Enable international use on every Visa card; buy travel insurance</span></span></label></li>
+<li><label><input type="checkbox" data-id="docs"><span class="t"><span>Print visas, tickets, return flight and a bank statement</span><small>Malaysia can ask for an onward ticket and proof of funds at Port Klang</small></span></label></li>
+<li><label><input type="checkbox" data-id="pack"><span class="t"><span>Pack and weigh bags: 30 kg check-in, 7 kg cabin each</span><small><a href="#packing">packing list</a></small></span></label></li>
+</ul></div>
+
+<div class="group" data-due="2026-10-18"><h3>Oct 16 – 18 <span class="due"></span></h3><ul class="todo">
+<li><label><input type="checkbox" data-id="maa"><span class="t"><span>Fri 16: reach Chennai T2 by 11:30 for IndiGo 6E 1343</span><small>Counters close 13:05</small></span></label></li>
+<li><label><input type="checkbox" data-id="mdac"><span class="t"><span>Malaysia Digital Arrival Card for all 8</span><small>Within 3 days before Oct 19 · <a href="https://imigresen-online.imi.gov.my/mdac/main" target="_blank" rel="noopener">MDAC official</a></small></span></label></li>
+</ul></div>
+
+<div class="group" data-due="2026-10-20"><h3>Oct 18 – 20 <span class="due"></span></h3><ul class="todo">
+<li><label><input type="checkbox" data-id="sgac2"><span class="t"><span>New Singapore Arrival Cards before the Oct 21 border crossing</span><small><a href="https://eservices.ica.gov.sg/arrivalcard" target="_blank" rel="noopener">ICA official</a></small></span></label></li>
+</ul></div>
+
+</div>
+<button class="reset" id="reset" type="button">Clear all ticks</button>
+</div></section>
+
+<section id="see"><div class="wrap">
+<div class="head"><p class="eyebrow">Highlights</p><h2>What we're going to see</h2></div>
+<div class="gallery">
+<figure data-wiki="Marina_Bay_Sands"><div class="ph"><span>Marina Bay</span></div><figcaption>Marina Bay</figcaption></figure>
+<figure data-wiki="Gardens_by_the_Bay"><div class="ph"><span>Gardens by the Bay</span></div><figcaption>Gardens by the Bay</figcaption></figure>
+<figure data-wiki="Batu_Caves"><div class="ph"><span>Batu Caves</span></div><figcaption>Batu Caves</figcaption></figure>
+<figure><div class="ph"><span>Petronas Towers</span><img src="images/petronas-towers.jpg" alt="Petronas Twin Towers at night" loading="lazy" onerror="this.remove()"></div><figcaption>Petronas Towers</figcaption></figure>
+<figure data-wiki="Universal_Studios_Singapore"><div class="ph"><span>Universal Studios</span></div><figcaption>Universal Studios</figcaption></figure>
+<figure data-wiki="Sentosa"><div class="ph"><span>Sentosa</span></div><figcaption>Sentosa</figcaption></figure>
+<figure data-wiki="Singapore_Zoo"><div class="ph"><span>Singapore Zoo</span></div><figcaption>Singapore Zoo</figcaption></figure>
+<figure><div class="ph"><span>Jewel Changi</span><img src="images/jewel-changi.jpg" alt="Rain Vortex at Jewel Changi" loading="lazy" onerror="this.remove()"></div><figcaption>Jewel Changi</figcaption></figure>
+</div>
+<p class="note">Photos: Wikipedia / Wikimedia Commons, Creative Commons licences.</p>
+</div></section>
+
+<section id="days" style="background:var(--stripe)"><div class="wrap">
+<div class="head"><p class="eyebrow">Itinerary</p><h2>Day by day</h2></div>
+<div class="days">
+
+<article class="day" id="d16"><figure><div class="ph"><span>Changi Airport</span><img src="images/changi-airport.jpg" alt="Changi Airport control tower and Jewel" loading="lazy" onerror="this.remove()"></div><figcaption>Photo: LN9267 / Wikimedia Commons, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Jewel_Changi_Airport_13-11-2023(1).jpg" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Fri 16 Oct · Chennai → Singapore</p><h3>Arrive and settle in</h3>
+<ul><li>11:30 at Chennai T2; IndiGo 6E 1343 departs 14:20 (check-in closes 13:05)</li><li>Land Changi T2 at 21:20 local time (+2.5 hrs)</li><li>Immigration and bags ~45 min — have Arrival Card QR codes ready</li><li>Pre-booked maxi-cab to your aunt's home (Grab can't guarantee 8 seats late)</li><li>Late supper if needed: Springleaf Prata or Al-Azhar, both open 24 hours</li></ul>
+<p class="meta"><span><b>Getting around:</b> Pre-booked 13-seater from Changi T2</span><span><b>Est. per person:</b> ~SGD 20 (cab share + supper)</span></p>
+<div class="tip"><b>Tip</b> · Download Grab and SimplyGo before landing; SIM or eSIM at the Changi arrival counters.</div></div></article>
+
+<article class="day" id="d17"><figure data-wiki="Gardens_by_the_Bay"><div class="ph"><span>Gardens by the Bay</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Gardens_by_the_Bay" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Sat 17 Oct · Singapore</p><h3>Marina Bay from morning to lights</h3>
 <ul><li>10:00 Merlion Park, walk the waterfront to Marina Bay Sands</li><li>12:30 Lunch at Lau Pa Sat hawker centre (premium: Din Tai Fung, MBS)</li><li>14:30 Gardens by the Bay — Flower Dome &amp; Cloud Forest, 2–2.5 hrs indoors</li><li>18:30 Dinner at Satay by the Bay, outdoors, easy for eight</li><li>19:45 Garden Rhapsody at Supertree Grove, then Spectra at MBS (20:00 / 21:00 / 22:00)</li></ul>
-<div class="tip"><b>Tip</b> · Premium dinner swap: LAVO rooftop at MBS or Jumbo Seafood chilli crab at Riverfront.</div>
-</div>
-<figure class="photo" data-wiki="Gardens_by_the_Bay"><div class="ph"><span>Gardens by the Bay</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Gardens_by_the_Bay" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="dark day">
-<div class="col">
-<p class="eyebrow">SUN 18 OCT · SINGAPORE → CRUISE</p>
-<h2>Chinatown, then set sail</h2>
-<ul><li>09:30 Buddha Tooth Relic Temple and Chinatown street market</li><li>11:30 Early lunch at Maxwell Food Centre — Tian Tian chicken rice</li><li>13:00 Taxi to Marina Bay Cruise Centre (15 min); arrive at the start of your check-in window</li><li>Onboard: reserve Dream Dining Room and Zodiac theatre seats on the app</li><li>Overnight sailing to Port Klang</li></ul>
-<div class="tip"><b>Tip</b> · Check your e-ticket for the exact boarding window — with eight people, be first in the queue.</div>
-</div>
-<figure class="photo" data-wiki="Genting_Dream"><div class="ph"><span>Genting Dream</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Genting_Dream" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">MON 19 OCT · PORT KLANG → KUALA LUMPUR</p>
-<h2>Batu Caves and Jalan Alor</h2>
-<ul><li>08:00–09:00 Disembark; pre-booked 10-seater van waits at the terminal</li><li>10:30 Batu Caves (1 hr 15 drive) — 272 steps, modest dress, sarongs for rent, zip your bags</li><li>12:30 Banana-leaf lunch at Rani Vilas or Sri Ganapathy by the caves</li><li>14:30 Check in to the KL apartment (Bukit Bintang / KLCC), rest</li><li>18:30 Jalan Alor street food: Wong Ah Wah wings, Beh Brothers Hokkien mee, fruit stalls</li></ul>
-<div class="tip"><b>Tip</b> · Ask the Oct 21 van operator to quote a 3-day package covering the port pickup too.</div>
-</div>
-<figure class="photo" data-wiki="Batu_Caves"><div class="ph"><span>Batu Caves</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Batu_Caves" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">TUE 20 OCT · KUALA LUMPUR</p>
-<h2>Petronas Towers, KLCC and shopping</h2>
-<ul><li>09:00 Petronas Twin Towers Skybridge + Level 86 deck (pre-booked morning slot)</li><li>10:30 KLCC Park and the fountain lake</li><li>12:00 Lunch at Suria KLCC — Madam Kwan&#x27;s nasi lemak and cendol</li><li>14:00 Pavilion KL (Din Tai Fung, Level 6) and Lot 10 Hutong food court</li><li>16:30 Optional: The View at Merdeka 118, or Central Market for souvenirs</li><li>19:30 Premium dinner with the towers lit: Marini&#x27;s on 57, Fuego at Troika, or Nadodi</li><li>21:00 Lake Symphony fountain show at KLCC</li></ul>
-<div class="tip"><b>Tip</b> · Check the Dine &amp; Save listing — one of the three dinner picks may give 20% off.</div>
-</div>
-<figure class="photo"><div class="ph"><span>Petronas Towers</span><img src="images/petronas-towers.jpg" alt="Petronas Twin Towers at night" onerror="this.remove()"></div><figcaption>Photo: Shivakhanal / Wikimedia Commons, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Petronas_Twin_Towers,_Kuala_Lumpur.jpg" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light"><h2>Where to sleep in KL, Oct 19–20</h2><p class="mute">Expect RM 900–1,500 per unit per night in mid-October. Multi-bedroom units sell out — book this week.</p><div class="cards"><div class="card"><p class="eyebrow">KLCC</p><h3>Fraser Place Kuala Lumpur</h3><p class="mute">Three-bedroom serviced apartments; book two 2BR units or a 3BR + 1BR. Full kitchen, pool, 10 minutes' walk to Petronas.</p><p class="play">Best balance of space and location</p></div><div class="card"><p class="eyebrow">Jalan Sultan Ismail</p><h3>The Face Suites</h3><p class="mute">2–3BR suites with the infinity pool facing the towers; between KLCC and Bukit Bintang.</p><p class="play">Best view for the family photo</p></div><div class="card"><p class="eyebrow">KLCC</p><h3>E&amp;O Residences</h3><p class="mute">Spacious 2BR units on a quieter street; generous living rooms suit elders and kids.</p><p class="play">Best for a calmer base</p></div></div></section><section class="dark day">
-<div class="col">
-<p class="eyebrow">WED 21 OCT · KL → SINGAPORE</p>
-<h2>The long drive south</h2>
-<ul><li>08:00 Depart KL in the private 10-seater van (about 4.5 hrs to the border)</li><li>Lunch stop: Yong Peng (Fook Yuen Hakka food) or a Malacca Jonker Street detour (+1.5 hrs)</li><li>Border: everyone leaves the van for immigration on both sides — allow 1–2 hrs</li><li>Ask the driver for Tuas Second Link, far quicker for vans than Woodlands</li><li>16:00–18:00 Arrive; easy dinner near your aunt&#x27;s home</li></ul>
-<div class="tip"><b>Tip</b> · New Singapore Arrival Cards for all eight must be submitted before this crossing.</div>
-</div>
-<figure class="photo" data-wiki="Malaysia–Singapore_Second_Link"><div class="ph"><span>Tuas Second Link</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Malaysia–Singapore_Second_Link" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">THU 22 OCT · SENTOSA</p>
-<h2>Universal Studios Singapore</h2>
+<p class="meta"><span><b>Getting around:</b> MRT to Raffles Place / Bayfront</span><span><b>Est. per person:</b> ~SGD 80 (domes SGD 46 + food)</span></p>
+<div class="tip"><b>Tip</b> · Premium dinner swap: LAVO rooftop at MBS or Jumbo Seafood chilli crab at Riverfront.</div></div></article>
+
+<article class="day" id="d18"><figure data-wiki="Genting_Dream"><div class="ph"><span>Genting Dream</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Genting_Dream" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Sun 18 Oct · Singapore → cruise</p><h3>Chinatown, then set sail</h3>
+<ul><li>09:30 Buddha Tooth Relic Temple and Chinatown street market</li><li>11:30 Early lunch at Maxwell Food Centre — Tian Tian chicken rice</li><li>13:00 Taxi to Marina Bay Cruise Centre (15 min); three Balcony Deluxe cabins booked</li><li>Onboard: reserve Dream Dining Room and Zodiac theatre seats on the app</li><li>Overnight sailing to Port Klang</li></ul>
+<p class="meta"><span><b>Getting around:</b> MRT to Chinatown; taxi to the cruise centre</span><span><b>Est. per person:</b> ~SGD 15; main dining on board is in the fare</span></p>
+<div class="tip"><b>Tip</b> · Check your e-ticket for the exact boarding window — with eight people, be first in the queue.</div></div></article>
+
+<article class="day" id="d19"><figure data-wiki="Batu_Caves"><div class="ph"><span>Batu Caves</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Batu_Caves" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Mon 19 Oct · Port Klang → Kuala Lumpur</p><h3>Batu Caves and Jalan Alor</h3>
+<ul><li>08:00–09:00 Disembark; the rental company hands over the self-drive van at the terminal — load bags, check the Touch 'n Go card</li><li>10:30 Batu Caves (Driver 1, ~1 hr 15 via expressway) — 272 steps, modest dress, sarongs for rent, zip your bags</li><li>12:30 Banana-leaf lunch at Rani Vilas or Sri Ganapathy by the caves</li><li>14:30 Drive to the Airbnb (Driver 2, ~30 min), park, check in, rest</li><li>18:30 Walk or Grab to Jalan Alor — skip driving and parking in Bukit Bintang at night</li><li>Jalan Alor street food: Wong Ah Wah wings, Beh Brothers Hokkien mee, fruit stalls</li></ul>
+<p class="meta"><span><b>Getting around:</b> Self-drive 9-seat van from the port, luggage aboard</span><span><b>Est. per person:</b> ~RM 70 + van share</span></p>
+<div class="tip"><b>Tip</b> · Photograph the van all round at handover, and put Batu Caves in Waze before leaving the port.</div></div></article>
+
+<article class="day" id="d20"><figure><div class="ph"><span>Petronas Towers</span><img src="images/petronas-towers.jpg" alt="Petronas Twin Towers at night" loading="lazy" onerror="this.remove()"></div><figcaption>Photo: Shivakhanal / Wikimedia Commons, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Petronas_Twin_Towers,_Kuala_Lumpur.jpg" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Tue 20 Oct · Kuala Lumpur</p><h3>Petronas Towers, KLCC and shopping</h3>
+<ul><li>09:00 Petronas Twin Towers Skybridge + Level 86 deck (pre-booked morning slot)</li><li>10:30 KLCC Park and the fountain lake</li><li>12:00 Lunch at Suria KLCC — Madam Kwan's nasi lemak and cendol</li><li>14:00 Pavilion KL (Din Tai Fung, Level 6) and Lot 10 Hutong food court</li><li>16:30 Optional: The View at Merdeka 118, or Central Market for souvenirs</li><li>19:30 Premium dinner with the towers lit: Marini's on 57, Fuego at Troika, or Nadodi</li><li>21:00 Lake Symphony fountain show at KLCC</li></ul>
+<p class="meta"><span><b>Getting around:</b> On foot — KLCC to Pavilion is a covered walkway; the van stays parked</span><span><b>Est. per person:</b> ~RM 400 (Skybridge RM 80 + premium dinner)</span></p>
+<div class="tip"><b>Tip</b> · Check the Dine &amp; Save listing — one of the three dinner picks may give 20% off.</div></div></article>
+
+<article class="day" id="d21"><figure data-wiki="Malaysia–Singapore_Second_Link"><div class="ph"><span>Tuas Second Link</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Malaysia–Singapore_Second_Link" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Wed 21 Oct · KL → Singapore</p><h3>The long drive south</h3>
+<ul><li>07:30 Rental company collects the self-drive van from the Airbnb</li><li>08:00 Depart KL in the pre-booked van with driver (about 4.5 hrs to the border)</li><li>Lunch stop: Yong Peng (Fook Yuen Hakka food) or a Malacca Jonker Street detour (+1.5 hrs)</li><li>Border: everyone leaves the van for immigration on both sides — allow 1–2 hrs</li><li>Ask the driver for Tuas Second Link, far quicker for vans than Woodlands</li><li>16:00–18:00 Arrive; easy dinner near your aunt's home</li></ul>
+<p class="meta"><span><b>Getting around:</b> Van with driver, ~6–7 hrs with border — the drivers get a rest day</span><span><b>Est. per person:</b> ~RM 30 lunch + van share</span></p>
+<div class="tip"><b>Tip</b> · New Singapore Arrival Cards for all eight must be submitted before this crossing.</div></div></article>
+
+<article class="day" id="d22"><figure data-wiki="Universal_Studios_Singapore"><div class="ph"><span>Universal Studios Singapore</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Universal_Studios_Singapore" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Thu 22 Oct · Sentosa</p><h3>Universal Studios Singapore</h3>
 <ul><li>Weekday hours 10:00–18:00 — arrive 09:30; MRT to HarbourFront, Sentosa Express to Waterfront</li><li>Ride order: Transformers → Battlestar Galactica → Revenge of the Mummy → Jurassic Park Rapids</li><li>Lunch inside the park; keep ponchos handy for the water rides</li><li>Dinner at Resorts World: Malaysian Food Street (casual) or Osia Steak &amp; Seafood Grill (premium)</li></ul>
-<div class="tip"><b>Tip</b> · Book on Pelago with VISASG15 across several new accounts to stack the SGD 15 caps.</div>
-</div>
-<figure class="photo" data-wiki="Universal_Studios_Singapore"><div class="ph"><span>Universal Studios Singapore</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Universal_Studios_Singapore" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">FRI 23 OCT · SENTOSA</p>
-<h2>Beaches, luge and Wings of Time</h2>
+<p class="meta"><span><b>Getting around:</b> MRT to HarbourFront + Sentosa Express</span><span><b>Est. per person:</b> ~SGD 120–170 (USS ~SGD 70 after VISASG15)</span></p>
+<div class="tip"><b>Tip</b> · Book on Pelago with VISASG15 across several new accounts to stack the SGD 15 caps.</div></div></article>
+
+<article class="day" id="d23"><figure data-wiki="Sentosa"><div class="ph"><span>Sentosa Island</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Sentosa" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Fri 23 Oct · Sentosa</p><h3>Beaches, luge and Wings of Time</h3>
 <ul><li>10:00 Cable car from Mount Faber down to Siloso Beach</li><li>11:00 Skyline Luge and Skyride (combo tickets on Pelago)</li><li>13:00 Lunch at Coastes on the sand, or Ola Beach Club</li><li>15:00 Singapore Oceanarium — indoors for the hot hours, ~2 hrs</li><li>18:00 Dinner at Tanjong Beach Club (book) or Quayside Isle</li><li>19:40 Wings of Time — free with each Visa Discovery Choice Pass</li></ul>
-<div class="tip"><b>Tip</b> · Redeem the Sentosa pass online before the trip; each adult&#x27;s Visa card earns one ticket.</div>
-</div>
-<figure class="photo" data-wiki="Sentosa"><div class="ph"><span>Sentosa Island</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Sentosa" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="dark day">
-<div class="col">
-<p class="eyebrow">SAT 24 OCT · MANDAI</p>
-<h2>Singapore Zoo and Night Safari</h2>
+<p class="meta"><span><b>Getting around:</b> Cable car in; Sentosa Express / beach tram on the island</span><span><b>Est. per person:</b> ~SGD 230 (cable car, luge, Oceanarium; Wings of Time free)</span></p>
+<div class="tip"><b>Tip</b> · Redeem the Sentosa pass online before the trip; each adult's Visa card earns one ticket.</div></div></article>
+
+<article class="day" id="d24"><figure data-wiki="Singapore_Zoo"><div class="ph"><span>Singapore Zoo</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Singapore_Zoo" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Sat 24 Oct · Mandai</p><h3>Singapore Zoo and Night Safari</h3>
 <ul><li>10:00 Singapore Zoo — Splash Safari and Elephant presentations; MRT to Khatib + Mandai shuttle, or two Grabs</li><li>13:30 Lunch at Ah Meng Restaurant inside the zoo</li><li>15:30 Rest, or River Wonders for the Amazon boat ride and giant pandas</li><li>18:00 Dinner at Ulu Ulu Safari Restaurant</li><li>19:15 Night Safari first tram — book early, Saturdays fill</li></ul>
-<div class="tip"><b>Tip</b> · Book the Night Safari tram slot today; Saturday evenings sell out first.</div>
-</div>
-<figure class="photo" data-wiki="Singapore_Zoo"><div class="ph"><span>Singapore Zoo</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Singapore_Zoo" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">SUN 25 OCT · SINGAPORE</p>
-<h2>Little India, Orchard Road, river dinner</h2>
+<p class="meta"><span><b>Getting around:</b> MRT to Khatib + Mandai shuttle, or two Grabs</span><span><b>Est. per person:</b> ~SGD 170 (Zoo 48 + Night Safari 58 + meals)</span></p>
+<div class="tip"><b>Tip</b> · Book the Night Safari tram slot today; Saturday evenings sell out first.</div></div></article>
+
+<article class="day" id="d25"><figure data-wiki="Little_India,_Singapore"><div class="ph"><span>Little India</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Little_India,_Singapore" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Sun 25 Oct · Singapore</p><h3>Little India, Orchard Road, river dinner</h3>
 <ul><li>09:30 Little India — Deepavali light-up along Serangoon Road; breakfast at Komala Vilas; Mustafa Centre</li><li>12:30 Lunch at The Coconut Club, Beach Road — Bib Gourmand nasi lemak</li><li>14:00 Orchard Road: ION, Takashimaya, Paragon</li><li>17:30 Bumboat river cruise from Clarke Quay at dusk, 40 min</li><li>19:00 Dinner: Jumbo Seafood chilli crab, or Peranakan at Candlenut (Michelin star)</li></ul>
-<div class="tip"><b>Tip</b> · Check Candlenut and Jumbo against the Dine &amp; Save listing before booking.</div>
+<p class="meta"><span><b>Getting around:</b> MRT around town; bumboat from Clarke Quay</span><span><b>Est. per person:</b> ~SGD 140 + shopping (chilli crab dinner ~SGD 80)</span></p>
+<div class="tip"><b>Tip</b> · Check Candlenut and Jumbo against the Dine &amp; Save listing before booking.</div></div></article>
+
+<article class="day" id="d26"><figure><div class="ph"><span>Jewel Changi Airport</span><img src="images/jewel-changi.jpg" alt="Rain Vortex at Jewel Changi" loading="lazy" onerror="this.remove()"></div><figcaption>Photo: Mike Peel / Wikimedia Commons, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:At_Jewel_Changi,_Singapore_2023_36.jpg" target="_blank" rel="noopener">source</a></figcaption></figure>
+<div class="txt"><p class="eyebrow">Mon 26 Oct · Singapore → Chennai</p><h3>Jewel Changi and home</h3>
+<ul><li>Morning: pack; last shopping at Bugis Street</li><li>14:00 Jewel Changi — Rain Vortex, Canopy Park nets and mazes, Shiseido Forest Valley</li><li>17:00 Early dinner at Jewel: Song Fa Bak Kut Teh, Shake Shack, Burnt Ends Bakery</li><li>18:00 Walk to T2 — Air India Express counters open (they close 20:00)</li><li>19:30 Airside; IX 629 departs 21:00, lands Chennai T2 22:40</li></ul>
+<p class="meta"><span><b>Getting around:</b> 13-seater to Jewel with all bags</span><span><b>Est. per person:</b> ~SGD 40 (cab share + dinner)</span></p>
+<div class="tip"><b>Tip</b> · Store bags at Jewel's baggage storage while you explore, then check in as soon as counters open at 18:00.</div></div></article>
+
 </div>
-<figure class="photo" data-wiki="Little_India,_Singapore"><div class="ph"><span>Little India</span></div><figcaption>Photo: Wikipedia / Wikimedia Commons · <a href="https://en.wikipedia.org/wiki/Little_India,_Singapore" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light day">
-<div class="col">
-<p class="eyebrow">MON 26 OCT · SINGAPORE → CHENNAI</p>
-<h2>Jewel Changi and home</h2>
-<ul><li>Morning: pack; last shopping at Bugis Street</li><li>14:00 Jewel Changi — Rain Vortex, Canopy Park nets and mazes, Shiseido Forest Valley</li><li>17:00 Early dinner at Jewel: Song Fa Bak Kut Teh, Shake Shack, Burnt Ends Bakery</li><li>18:00 Early check-in counters at Jewel where offered, else walk to the terminal</li><li>19:30 Airside; 21:00 departure to Chennai</li></ul>
-<div class="tip"><b>Tip</b> · Rain Vortex light show runs in the evening — the 20:00 show is just before you head airside.</div>
+</div></section>
+
+<section class="dark" id="stay"><div class="wrap">
+<div class="head"><p class="eyebrow gold">Kuala Lumpur · Oct 19–21</p><h2>Book the Airbnb</h2><p class="mute">One whole flat keeps all eight together. Links open with Oct 19–21 and 8 guests filled in.</p></div>
+<div class="cards">
+<div class="card"><p class="eyebrow">4 BR · sleeps 12 · 10 min walk to KLCC</p><h3>Mews #10 — "Ultimate Airbnb for groups"</h3><p class="mute">2,000+ sq ft with a balcony facing the Petronas Towers. Three queen rooms plus a small fourth room with a pull-out — eight fit on real beds.</p><p class="play">Best for keeping the family together</p><div class="links"><a class="btn" href="https://www.airbnb.com/rooms/30493830?check_in=2026-10-19&amp;check_out=2026-10-21&amp;adults=8" target="_blank" rel="noopener">View on Airbnb</a></div></div>
+<div class="card"><p class="eyebrow">3 BR · sleeps 8 · 5 min to KLCC</p><h3>KLCC Luxury Suite</h3><p class="mute">Floor-to-ceiling windows with city lights at night; three bedrooms sized for exactly eight guests.</p><p class="play">Best if the 4BR is taken</p><div class="links"><a class="btn" href="https://www.airbnb.com/rooms/33882897?check_in=2026-10-19&amp;check_out=2026-10-21&amp;adults=8" target="_blank" rel="noopener">View on Airbnb</a></div></div>
+<div class="card"><p class="eyebrow">Search</p><h3>See every option for our dates</h3><p class="mute">3+ bedrooms around KLCC. Filter by "Guest favourite" and read reviews mentioning lifts and parking.</p><div class="links" style="margin-top:auto"><a class="btn" href="https://www.airbnb.com/s/KLCC--Kuala-Lumpur--Malaysia/homes?checkin=2026-10-19&amp;checkout=2026-10-21&amp;adults=8&amp;min_bedrooms=3" target="_blank" rel="noopener">Airbnb search</a><a class="btn ghost" href="https://www.booking.com/searchresults.html?ss=KLCC%2C+Kuala+Lumpur&amp;checkin=2026-10-19&amp;checkout=2026-10-21&amp;group_adults=8&amp;no_rooms=3" target="_blank" rel="noopener">Booking.com search</a></div></div>
 </div>
-<figure class="photo"><div class="ph"><span>Jewel Changi Airport</span><img src="images/jewel-changi.jpg" alt="Rain Vortex at Jewel Changi" onerror="this.remove()"></div><figcaption>Photo: Mike Peel / Wikimedia Commons, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:At_Jewel_Changi,_Singapore_2023_36.jpg" target="_blank" rel="noopener">source</a></figcaption></figure>
-</section><section class="light"><h2>Where we eat</h2><table><tr><th>Country</th><th>Tier</th><th>Picks</th></tr><tr><td><b>Singapore</b></td><td class="coral"><b>Street / hawker</b></td><td>Lau Pa Sat · Maxwell Food Centre · Satay by the Bay · Komala Vilas</td></tr><tr><td><b>Singapore</b></td><td class="coral"><b>Casual top-rated</b></td><td>The Coconut Club · Song Fa Bak Kut Teh · Coastes · Jumbo Seafood</td></tr><tr><td><b>Singapore</b></td><td class="coral"><b>Premium</b></td><td>LAVO at MBS · Tanjong Beach Club · Candlenut · Osia · Violet Oon</td></tr><tr><td><b>Malaysia</b></td><td class="coral"><b>Street food</b></td><td>Jalan Alor: Wong Ah Wah, Beh Brothers · Lot 10 Hutong</td></tr><tr><td><b>Malaysia</b></td><td class="coral"><b>Casual top-rated</b></td><td>Rani Vilas (Batu Caves) · Madam Kwan&#x27;s · Din Tai Fung Pavilion</td></tr><tr><td><b>Malaysia</b></td><td class="coral"><b>Premium</b></td><td>Marini&#x27;s on 57 · Fuego at Troika Sky Dining · Nadodi</td></tr></table><p class="credit">Premium picks: confirm current participation at dineandsave.visa.com/listing and book tables for eight a week ahead.</p></section><section class="accent"><p class="eyebrow light-eb">NEXT STEPS THIS WEEK</p><h2 class="big">Book the KL apartment, the Skybridge and the Night Safari — the rest can wait.</h2><p class="lead">Then redeem the Sentosa passes, set up Pelago accounts for Universal Studios, and lock the van for Oct 19 and 21.</p></section></div><div id="nav"></div>
+<h3 class="sub">Backup: serviced suites</h3>
+<p class="mute" style="margin:-8px 0 20px">Expect RM 900–1,500 per unit per night in mid-October; you'd need two units.</p>
+<div class="cards">
+<div class="card"><p class="eyebrow">KLCC</p><h3>Fraser Place Kuala Lumpur</h3><p class="mute">Serviced residences with full kitchens and a sky pool, 10 minutes' walk to Petronas. Check which bedroom sizes are open.</p><p class="play">Best balance of space and location</p><div class="links"><a class="btn" href="https://www.booking.com/searchresults.html?ss=Fraser+Place+Kuala+Lumpur&amp;checkin=2026-10-19&amp;checkout=2026-10-21&amp;group_adults=8&amp;no_rooms=2" target="_blank" rel="noopener">Check rates · Booking.com</a></div></div>
+<div class="card"><p class="eyebrow">Jalan Sultan Ismail</p><h3>The Face Suites</h3><p class="mute">1–2BR suites with the infinity pool facing the towers; between KLCC and Bukit Bintang.</p><p class="play">Best view for the family photo</p><div class="links"><a class="btn" href="https://www.booking.com/searchresults.html?ss=THE+FACE+Suites+Kuala+Lumpur&amp;checkin=2026-10-19&amp;checkout=2026-10-21&amp;group_adults=8&amp;no_rooms=2" target="_blank" rel="noopener">Check rates · Booking.com</a></div></div>
+<div class="card"><p class="eyebrow">KLCC</p><h3>E&amp;O Residences</h3><p class="mute">Spacious 2BR units on a quieter street; generous living rooms suit elders and kids.</p><p class="play">Best for a calmer base</p><div class="links"><a class="btn" href="https://www.eoresidenceskl.com/" target="_blank" rel="noopener">Official site</a><a class="btn ghost" href="https://www.booking.com/searchresults.html?ss=E%26O+Residences+Kuala+Lumpur&amp;checkin=2026-10-19&amp;checkout=2026-10-21&amp;group_adults=8&amp;no_rooms=2" target="_blank" rel="noopener">Booking.com</a></div></div>
+</div>
+<p class="note">Listings checked live on 5 Oct 2026; confirm availability and cancellation terms before paying.</p>
+</div></section>
+
+<section id="rides"><div class="wrap">
+<div class="head"><p class="eyebrow">Transport</p><h2>Book the rides</h2><p class="mute">Eight people plus luggage: a 13-seater fits 9 with bags, so one vehicle covers every leg.</p></div>
+<div class="table"><table><tr><th>When</th><th>Ride</th><th>Book</th></tr>
+<tr><td><b>Fri 16</b></td><td>Changi → aunt's home, 21:20 landing</td><td><a class="btn" href="https://www.changirecommends.com/deal.aspx?id=37060" target="_blank" rel="noopener">Changi 13-seater pickup</a><a class="btn ghost" href="https://www.klook.com/activity/66359-singapore-changi-airport-private-transfer/" target="_blank" rel="noopener">Klook 13-seater</a></td></tr>
+<tr><td><b>Sun 18</b></td><td>Home → Marina Bay Cruise Centre, ~13:00</td><td><a class="btn" href="https://www.bookmaxicab.com/" target="_blank" rel="noopener">BookMaxicab</a> <span class="mute">or two Grabs</span></td></tr>
+<tr><td><b>Mon 19 – Wed 21</b></td><td>Self-drive 9-seat van: Port Klang → Batu Caves → KL, returned Oct 21 morning</td><td><a class="btn" href="https://www.kayak.co.uk/Kuala-Lumpur-10-Seater-Car-Hire.4723.10-lcv.ksp" target="_blank" rel="noopener">10-seaters · Kayak</a><a class="btn ghost" href="https://www.kayak.com/Kuala-Lumpur-Van-Rentals.4723.cva.ksp" target="_blank" rel="noopener">All vans</a></td></tr>
+<tr><td><b>Wed 21</b></td><td>KL → Singapore van with driver, 08:00 (Malacca stop optional)</td><td><a class="btn" href="https://www.klook.com/activity/134249-private-one-way-transfer-from-kuala-lumpur-to-singapore/" target="_blank" rel="noopener">Klook KL → SG van</a><a class="btn ghost" href="https://daytrip.com/en/transfers/kuala-lumpur-my/singapore-sg" target="_blank" rel="noopener">Daytrip</a></td></tr>
+<tr><td><b>Mon 26</b></td><td>Home → Changi / Jewel, ~13:30</td><td><a class="btn" href="https://www.bookmaxicab.com/" target="_blank" rel="noopener">BookMaxicab</a><a class="btn ghost" href="https://www.klook.com/airport-transfers/service/sin-singapore-changi-airport/" target="_blank" rel="noopener">Klook airport</a></td></tr>
+</table></div>
+<p class="note">Links checked 5 Oct 2026; prices and availability change.</p>
+
+<h3 class="sub" id="drive">Driving plan — Malaysia only</h3>
+<p class="mute" style="margin:-8px 0 20px">Three of you hold International Driving Permits, and Malaysia drives on the left like India. Self-drive covers Oct 19–20; for Oct 21 a van with a driver handles the border and the bags.</p>
+<div class="cards">
+<div class="card"><p class="eyebrow">Vehicle</p><h3>One 9-seat van</h3><p class="mute">Hyundai Staria or Starex, booked in its 9-seat layout (driver + 8). Keeps everyone together with room for eight 30 kg bags, and stays within a normal car licence. About RM 200–270 a day.</p><p class="play">Fallback: two 7-seat MPVs (Innova / Alza), four people and bags in each, two drivers</p></div>
+<div class="card"><p class="eyebrow">Drivers &amp; papers</p><h3>Three drivers</h3><p class="mute">Each carries their Indian licence, IDP and passport. Register all three on the rental contract. The deposit goes on the main driver's credit card in the same name.</p><p class="play">Driver 1: port → Batu Caves · Driver 2: Batu Caves → KL · Driver 3: spare / any evening drive</p></div>
+<div class="card"><p class="eyebrow">Road rules</p><h3>Driving in Malaysia</h3><p class="mute">Left-hand traffic. Seatbelts for every seat, rear included. 110 km/h on expressways, 60 or less in town. No handheld phones. Speed cameras are common.</p><p class="play">Use Waze; tolls are cashless, so make sure the van has a loaded Touch 'n Go card</p></div>
+</div>
+<div class="cards" style="margin-top:20px">
+<div class="card"><p class="eyebrow">Parking &amp; fuel</p><h3>Before you drive off</h3><p class="mute">Pick an Airbnb with covered parking that fits a ~2 m van. Malls charge RM 3–6 an hour. At petrol stations you pay at the counter first; foreigners pay the unsubsidised fuel price.</p></div>
+<div class="card"><p class="eyebrow">Option B</p><h3>Drive all the way to Johor Bahru</h3><p class="mute">Keep the van on Oct 21, stop at Malacca, then return it in Johor Bahru (one-way fee ~RM 200). Rentals can't cross into Singapore, so the group then needs 2–3 cross-border taxis for 8 people and bags.</p><div class="links" style="margin-top:auto"><a class="btn ghost" href="https://www.cdgtaxi.com.sg/" target="_blank" rel="noopener">ComfortDelGro cross-border</a></div></div>
+<div class="card"><p class="eyebrow">Singapore</p><h3>No rental car here</h3><p class="mute">An MPV costs SGD 150–200 a day before road tolls and parking, and an 8-seater barely fits eight adults. The MRT plus a 13-seater maxi-cab for bag days is cheaper and easier.</p></div>
+</div>
+
+<h3 class="sub">Good to know</h3>
+<div class="grid3">
+<div class="check"><h3>Singapore entry</h3><p>All 8 have Singapore visas. Each entry still needs an SG Arrival Card — Oct 16 and again for Oct 21.</p></div>
+<div class="check"><h3>Malaysia entry</h3><p>Visa-free for Indians for up to 30 days until 31 Dec 2026. Submit the Digital Arrival Card; carry the onward ticket and proof of funds.</p></div>
+<div class="check"><h3>Passports</h3><p>At least 6 months' validity from Oct 26, with two blank pages.</p></div>
+<div class="check"><h3>Getting around as 8</h3><p>Grab fits 4–6; plan two cars or a 13-seater maxi-cab (~SGD 65–80 for airport and cruise transfers).</p></div>
+<div class="check"><h3>Payments</h3><p>Visa contactless taps onto Singapore MRT and buses; Touch 'n Go eWallet for KL hawkers.</p></div>
+<div class="check"><h3>Weather</h3><p>October brings afternoon thunderstorms — indoor stops are placed in the heat window.</p></div>
+</div>
+</div></section>
+
+<section id="budget"><div class="wrap">
+<div class="head"><p class="eyebrow">Money</p><h2>Budget for 8</h2><p class="mute">Estimates for the 8 adults still to spend, then what's already paid for flights and the cruise. Converted at about ₹75 per SGD and ₹23.5 per RM; all 8 are adults, so adult prices apply.</p></div>
+<div class="table"><table><tr><th>Item</th><th>Basis</th><th style="text-align:right">Group of 8 (₹)</th></tr>
+<tr><td><b>KL Airbnb, 2 nights</b></td><td>RM 1,500–3,000 per night for 3–4 BR near KLCC</td><td class="num">70,500 – 1,41,000</td></tr>
+<tr><td><b>Self-drive van, KL</b></td><td>9-seat van Oct 19–21 (RM 400–540) + port delivery and collection, fuel, tolls, parking: RM 750–1,040</td><td class="num">17,625 – 24,440</td></tr>
+<tr><td><b>KL → Singapore van</b></td><td>With driver, Oct 21, ~SGD 450–650 (get quotes)</td><td class="num">33,750 – 48,750</td></tr>
+<tr><td><b>Singapore rides</b></td><td>4 maxi-cab transfers (SGD 65–80 each) + Grab and MRT for 8 days</td><td class="num">45,000 – 67,500</td></tr>
+<tr><td><b>Singapore attractions</b></td><td>Per adult: USS ~SGD 70 after VISASG15, Gardens domes 46, Zoo 48, Night Safari 58, cable car 35, luge 25–30, Oceanarium 50, river cruise ~25; Wings of Time free with Visa</td><td class="num">2,14,200 – 2,17,500</td></tr>
+<tr><td><b>KL attractions + Grabs</b></td><td>Petronas Skybridge RM 80 per adult; Batu Caves free; a few Grabs</td><td class="num">18,800 – 23,500</td></tr>
+<tr><td><b>Food, Singapore</b></td><td>~8 days, all non-veg: hawker lunches (SGD 8–12 pp), 4–5 premium seafood and grill dinners</td><td class="num">1,80,000 – 2,70,000</td></tr>
+<tr><td><b>Food, KL</b></td><td>2 days incl. one premium dinner with tower views</td><td class="num">35,250 – 58,750</td></tr>
+<tr><td><b>eSIMs, tips, small extras</b></td><td>About SGD 150–250</td><td class="num">11,250 – 18,750</td></tr>
+<tr class="total"><td>Still to spend</td><td>About ₹78,000 – 1,09,000 per person</td><td class="num">6,26,375 – 8,70,190</td></tr>
+<tr><td><b>Already paid</b></td><td>IndiGo ₹1,58,968 + Air India Express ₹1,27,566 (6 people) + Genting Dream ₹56,186</td><td class="num">3,42,720</td></tr>
+<tr class="total"><td>Trip total</td><td>About ₹1.2 – 1.5 lakh per person, plus the 2 missing return tickets</td><td class="num">9,69,095 – 12,12,910</td></tr>
+</table></div>
+<p class="note">Shopping is extra and personal. Prices are 2026 published rates found on 5 Oct 2026; exchange rates move, so check before paying. Paying on Visa saves 15–20% where perks apply.</p>
+</div></section>
+
+<section id="packing" style="background:var(--stripe)"><div class="wrap light-list">
+<div class="head"><p class="eyebrow">Checklist</p><h2>Packing list</h2><p class="mute">Tick as you pack; saved in this browser.</p></div>
+<div class="progress"><div class="bar"><i id="pbar"></i></div><b id="pprog">0 / 0 packed</b></div>
+<div class="pack">
+<div class="group"><h3>Documents &amp; money</h3><ul class="todo">
+<li><label><input type="checkbox" data-id="p-pass"><span class="t"><span>Passports — 6+ months validity left</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-tix"><span class="t"><span>IndiGo, Air India Express and Trip.com cruise confirmations, printed and on phone</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-ac"><span class="t"><span>Arrival Card confirmations (SG ×2, MDAC)</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-idp"><span class="t"><span>Indian driving licences + IDPs for the 3 drivers</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-ins"><span class="t"><span>Travel insurance for all 8</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-visa"><span class="t"><span>Each adult's Visa card</span><small>Needed for the Sentosa pass</small></span></label></li>
+<li><label><input type="checkbox" data-id="p-cash"><span class="t"><span>Some SGD and RM cash for hawkers</span></span></label></li>
+</ul></div>
+<div class="group"><h3>Clothes &amp; weather</h3><ul class="todo">
+<li><label><input type="checkbox" data-id="p-light"><span class="t"><span>Light cotton clothes, 32°C and humid</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-modest"><span class="t"><span>One modest outfit each, knees and shoulders covered</span><small>Batu Caves and temples</small></span></label></li>
+<li><label><input type="checkbox" data-id="p-jacket"><span class="t"><span>Light jacket — cold AC on the cruise and in malls</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-swim"><span class="t"><span>Swimwear for Sentosa and the ship's pool</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-shoes"><span class="t"><span>Walking shoes + sandals</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-rain"><span class="t"><span>Compact umbrellas and ponchos</span><small>Afternoon storms + USS water rides</small></span></label></li>
+<li><label><input type="checkbox" data-id="p-sun"><span class="t"><span>Sunscreen, caps, sunglasses</span></span></label></li>
+</ul></div>
+<div class="group"><h3>Tech, health &amp; comfort</h3><ul class="todo">
+<li><label><input type="checkbox" data-id="p-plug"><span class="t"><span>Type G (UK 3-pin) adapters</span><small>Same plug in Singapore and Malaysia</small></span></label></li>
+<li><label><input type="checkbox" data-id="p-power"><span class="t"><span>Power banks — hand luggage only, max 2 each, up to 100 Wh</span><small>Can't be used or charged in flight</small></span></label></li>
+<li><label><input type="checkbox" data-id="p-meds"><span class="t"><span>Personal medicines + prescriptions</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-sea"><span class="t"><span>Motion-sickness tablets for the cruise</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-ors"><span class="t"><span>ORS sachets, mosquito repellent, sanitiser</span></span></label></li>
+<li><label><input type="checkbox" data-id="p-pillow"><span class="t"><span>Neck pillows and snacks for the 6-hour van ride</span></span></label></li>
+</ul></div>
+</div>
+<p class="note"><b>Don't pack:</b> chewing gum (import banned in Singapore), vapes or e-cigarettes (illegal in Singapore), or cigarettes (no duty-free allowance into Singapore).</p>
+</div></section>
+
+<section class="dark" id="perks"><div class="wrap">
+<div class="head"><p class="eyebrow gold">Checked for these dates</p><h2>Your Visa perks</h2></div>
+<div class="cards four">
+<div class="card"><h3>Pelago · VISASG15</h3><p class="mute">15% off Singapore activities, capped at SGD 15 per booking, new users only. Valid to 30 Nov 2026.</p><p class="play"><b>Play it:</b> Have several family members open their own Pelago account and book 1–2 Universal Studios tickets each — every booking gets its own SGD 15 cap.</p></div>
+<div class="card"><h3>Sentosa Discovery Choice Pass</h3><p class="mute">One complimentary Sentosa attraction worth up to SGD 55 per Visa card. Valid to 31 Mar 2027.</p><p class="play"><b>Play it:</b> Redeem online in advance. Every adult with their own Visa card picks Wings of Time — the whole group sees the show free.</p></div>
+<div class="card"><h3>Dine &amp; Save with Visa</h3><p class="mute">Up to 20% off the bill at participating restaurants in Singapore and Malaysia. Valid to 31 Oct 2026.</p><p class="play"><b>Play it:</b> Check <a href="https://dineandsave.visa.com/listing/" target="_blank" rel="noopener" style="color:var(--gold)">the listing</a> before booking each premium dinner; quote the offer when paying.</p></div>
+<div class="card"><h3>Din Tai Fung RM 20 off</h3><p class="mute">Was Johor Bahru outlets only and ended 15 Sep 2026 — not usable in KL on this trip.</p><p class="play"><b>Play it:</b> Din Tai Fung at Pavilion KL stays on the plan as a lunch option, just at full price.</p></div>
+</div>
+</div></section>
+
+<section id="food"><div class="wrap">
+<div class="head"><p class="eyebrow">Dining</p><h2>Where we eat</h2></div>
+<div class="table"><table><tr><th>Country</th><th>Tier</th><th>Picks</th></tr>
+<tr><td><b>Singapore</b></td><td class="coral">Street / hawker</td><td>Lau Pa Sat · Maxwell Food Centre · Satay by the Bay · Komala Vilas</td></tr>
+<tr><td><b>Singapore</b></td><td class="coral">Casual top-rated</td><td>The Coconut Club · Song Fa Bak Kut Teh · Coastes · Jumbo Seafood</td></tr>
+<tr><td><b>Singapore</b></td><td class="coral">Premium</td><td>LAVO at MBS · Tanjong Beach Club · Candlenut · Osia · Violet Oon</td></tr>
+<tr><td><b>Malaysia</b></td><td class="coral">Street food</td><td>Jalan Alor: Wong Ah Wah, Beh Brothers · Lot 10 Hutong</td></tr>
+<tr><td><b>Malaysia</b></td><td class="coral">Casual top-rated</td><td>Rani Vilas (Batu Caves) · Madam Kwan's · Din Tai Fung Pavilion</td></tr>
+<tr><td><b>Malaysia</b></td><td class="coral">Premium</td><td>Marini's on 57 · Fuego at Troika Sky Dining · Nadodi</td></tr>
+</table></div>
+<p class="note">Premium picks: confirm current participation at dineandsave.visa.com/listing and book tables for eight a week ahead.</p>
+</div></section>
+
+<section class="dark" id="etiquette"><div class="wrap">
+<div class="head"><p class="eyebrow gold">Culture</p><h2>Local etiquette</h2><p class="mute">A few habits that keep things smooth for a group of eight.</p></div>
+<div class="etq">
+<div class="group"><h3>Singapore</h3><ul>
+<li><b>Fines are real:</b> no eating or drinking on the MRT, no littering, no jaywalking, no vaping.</li>
+<li><b>Hawker centres:</b> a tissue packet on a seat means it's reserved ("chope"). Return trays and dishes to the racks.</li>
+<li><b>Tipping:</b> not expected; restaurants already add a 10% service charge.</li>
+<li><b>Queues:</b> people queue patiently for buses, taxis and food stalls — keep the group in single file.</li>
+<li><b>Temples:</b> remove shoes where signs say so at Sri Veeramakaliamman and Buddha Tooth Relic Temple; cover shoulders.</li>
+</ul></div>
+<div class="group"><h3>Malaysia</h3><ul>
+<li><b>Batu Caves and mosques:</b> cover knees and shoulders; sarongs can be rented at the entrance. Watch your bags around the monkeys.</li>
+<li><b>Hands:</b> give and receive money and food with your right hand; point with your thumb, not a finger.</li>
+<li><b>Bargaining:</b> fine at Central Market and street stalls, not in malls.</li>
+<li><b>Tipping:</b> not expected; rounding up for the van driver is appreciated.</li>
+<li><b>Greetings:</b> a smile and nod work best. During festival season, "Happy Deepavali" is welcome in both countries.</li>
+</ul></div>
+<div class="group"><h3>Staying safe</h3><ul>
+<li><b>Singapore</b> is very safe; the main risk is the heat — carry water and plan indoor afternoons.</li>
+<li><b>KL:</b> walk with bags on the side away from the road in Bukit Bintang; motorbike snatch theft happens.</li>
+<li><b>Crowds:</b> watch pockets at Jalan Alor, Petaling Street and the Batu Caves steps.</li>
+<li><b>Taxis:</b> use Grab or pre-booked vans; skip touts at the port and malls.</li>
+</ul></div>
+<div class="group"><h3>Emergency numbers</h3><ul>
+<li><b>Singapore:</b> 999 police · 995 ambulance and fire</li>
+<li><b>Malaysia:</b> 999 for all emergencies (112 from mobiles)</li>
+<li><b>Meeting point:</b> if anyone gets separated, regroup at the day's lunch spot and message the family group.</li>
+<li><b>Keep handy:</b> your aunt's address in Singapore and the KL Airbnb address, saved offline on every phone.</li>
+</ul></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<p class="eyebrow" style="color:var(--light)">Next steps this week</p>
+<h2>The two missing return tickets first — then the Airbnb, the self-drive van, the Skybridge and the Night Safari.</h2>
+<p class="lead">After that, redeem the Sentosa passes, set up Pelago accounts for Universal Studios, and book the KL → Singapore van for Oct 21. <a href="#todo" style="color:var(--light);font-weight:700">Open the to-do list →</a></p>
+<p class="small">Photos: Wikipedia / Wikimedia Commons, Creative Commons licences.</p>
+</div></footer>
+
 <script>
-const slides=[...document.querySelectorAll('section')];let i=0;
-function show(n){i=(n+slides.length)%slides.length;slides.forEach((s,k)=>s.classList.toggle('active',k===i));document.getElementById('nav').textContent=(i+1)+' / '+slides.length+'  —  ← → or click to move, F for fullscreen';location.hash=i+1;}
-const mobile=matchMedia('(max-width:900px),(max-height:520px)');
-function fit(){if(mobile.matches)return;const s=Math.min(innerWidth/1920,innerHeight/1080);const st=document.getElementById('stage');st.style.transform=`translate(-50%,-50%) scale(${s})`;st.style.transformOrigin='center';}
-addEventListener('resize',fit);fit();
-addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')show(i+1);else if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);else if(e.key==='f'||e.key==='F')document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();});
-mobile.addEventListener('change',fit);
-document.getElementById('stage').addEventListener('click',e=>{if(mobile.matches||e.target.closest('a'))return;show(e.clientX<innerWidth/3?i-1:i+1);});
-show(Math.max(0,(parseInt(location.hash.slice(1))||1)-1));
-if(mobile.matches&&i>0)slides[i].scrollIntoView();
+// Countdown to departure (Chennai, IST).
+const DEPART=new Date('2026-10-16T14:20:00+05:30');
+const DAY=864e5;
+const today=new Date();today.setHours(0,0,0,0);
+const left=Math.ceil((DEPART-new Date())/DAY);
+document.getElementById('cd-days').textContent=left>0?left:'0';
+
+// To-do list: ticks saved per browser; deadline badges computed from today's date.
+const KEY='trip-todo-2026';
+let saved={};try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){}
+const boxes=[...document.querySelectorAll('.todo input')];
+const tBoxes=[...document.querySelectorAll('#todo .todo input')],pBoxes=[...document.querySelectorAll('#packing .todo input')];
+function update(){
+  const done=tBoxes.filter(b=>b.checked).length,packed=pBoxes.filter(b=>b.checked).length;
+  document.getElementById('prog').textContent=done+' / '+tBoxes.length+' done';
+  document.getElementById('bar').style.width=(100*done/tBoxes.length)+'%';
+  document.getElementById('cd-todo').textContent=tBoxes.length-done;
+  document.getElementById('pprog').textContent=packed+' / '+pBoxes.length+' packed';
+  document.getElementById('pbar').style.width=(100*packed/pBoxes.length)+'%';
+  document.querySelectorAll('#todo .group').forEach(g=>{
+    const bs=[...g.querySelectorAll('input')],badge=g.querySelector('.due');
+    const due=new Date(g.dataset.due+'T00:00:00');const d=Math.round((due-today)/DAY);
+    const label=due.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+    badge.className='due';
+    if(bs.every(b=>b.checked)){badge.textContent='All done';badge.classList.add('done');}
+    else if(d<0){badge.textContent='Overdue · '+label;badge.classList.add('over');}
+    else if(d===0){badge.textContent='Due today';badge.classList.add('over');}
+    else{badge.textContent=(d===1?'Due tomorrow':'Due in '+d+' days');if(d<=3)badge.classList.add('soon');}
+  });
+}
+boxes.forEach(b=>{
+  b.checked=!!saved[b.dataset.id];b.closest('li').classList.toggle('done',b.checked);
+  b.addEventListener('change',()=>{saved[b.dataset.id]=b.checked;b.closest('li').classList.toggle('done',b.checked);
+    try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}update();});
+});
+document.getElementById('reset').addEventListener('click',()=>{tBoxes.forEach(b=>delete saved[b.dataset.id]);try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}tBoxes.forEach(b=>{b.checked=false;b.closest('li').classList.remove('done');});update();});
+update();
+
+// Highlight the nav link for the section in view.
+const links=[...document.querySelectorAll('nav a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}),{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(a=>{const s=document.querySelector(a.getAttribute('href'));s&&io.observe(s);});
+
 // Load each landmark's lead photo from Wikipedia's public REST API (CORS-enabled).
 document.querySelectorAll('figure[data-wiki]').forEach(async f=>{
   const t=f.dataset.wiki;const ph=f.querySelector('.ph');
   try{const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(t));const j=await r.json();
     const src=(j.originalimage&&j.originalimage.source)||(j.thumbnail&&j.thumbnail.source);
-    if(!src)throw 0;const img=new Image();img.alt=t.replace(/_/g,' ');img.onload=()=>{ph.innerHTML='';ph.appendChild(img);};img.onerror=()=>{};img.src=src;
+    if(!src)throw 0;const img=new Image();img.alt=t.replace(/_/g,' ');img.loading='lazy';img.onload=()=>{ph.querySelector('span')?.remove();ph.appendChild(img);};img.src=src;
   }catch(e){/* keep placeholder */}
 });
-</script></body></html>
+</script>
+</body></html>
