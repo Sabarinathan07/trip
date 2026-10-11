@@ -53,6 +53,14 @@ th{background:var(--dark);color:var(--light);text-align:left;padding:11px 16px;f
 td{padding:11px 16px;border-top:1px solid var(--line);vertical-align:top;font-size:15px}
 tr:nth-child(odd) td{background:var(--stripe)}
 td b{white-space:nowrap}
+/* looks */
+.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.look{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.look svg{display:block;width:100%;height:auto}
+.look div{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.look .eyebrow{font-size:11.5px;letter-spacing:2px}
+.look ul{padding-left:18px;font-size:14.5px;color:var(--mute)}
+.look a{margin-top:auto;font-size:14px;font-weight:600;text-decoration:none}
 /* bags */
 .bags{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .bag{background:var(--panel);border-radius:18px;padding:20px}
@@ -102,7 +110,7 @@ footer{padding:36px 0;font-size:14px;color:var(--mute)}
 </style></head><body>
 
 <header><div class="wrap"><a class="brand" href="#top">Sabari's packing</a>
-<nav><a href="#counts">How many</a><a href="#shoes">Shoes</a><a href="#days">Day by day</a><a href="#bags">Which bag</a><a href="#check">Checklist</a><a href="#dont">Don't pack</a><a href="../index.html">← Trip site</a></nav></div></header>
+<nav><a href="#counts">How many</a><a href="#shoes">Shoes</a><a href="#days">Day by day</a><a href="#looks">Looks</a><a href="#bags">Which bag</a><a href="#check">Checklist</a><a href="#dont">Don't pack</a><a href="../index.html">← Trip site</a></nav></div></header>
 
 <section class="dark hero" id="top"><div class="wrap">
 <p class="eyebrow" style="color:var(--gold)">Singapore &amp; Malaysia · 16 – 26 Oct 2026</p>
@@ -148,6 +156,11 @@ footer{padding:36px 0;font-size:14px;color:var(--mute)}
 <tr><td><b>Sun 25</b></td><td>Zoo, then Night Safari</td><td>Light chinos + tee; full-sleeve for the evening (mosquitoes)</td><td>Walking shoes</td><td>Mosquito repellent, cap, water bottle</td></tr>
 <tr><td><b>Mon 26</b></td><td>Sentosa morning, Jewel, flight home</td><td>Chinos in the morning; change into jeans + jacket for the flight</td><td>Nike Air</td><td>Fresh tee in the cabin bag, all chargers packed</td></tr>
 </table></div>
+</div></section>
+
+<section id="looks"><div class="wrap">
+<div class="head"><p class="eyebrow">Look book</p><h2>What it looks like on you</h2><p class="mute">Illustrations of each outfit from the day plan, drawn for a 24-year-old guy. Tap "See real photos" for photos of the same look on Pinterest.</p></div>
+<div class="looks" id="lookgrid"></div>
 </div></section>
 
 <section class="dark" id="bags"><div class="wrap">
@@ -309,5 +322,63 @@ document.getElementById('filters').addEventListener('click',e=>{const b=e.target
   document.querySelectorAll('#filters button').forEach(x=>x.classList.toggle('on',x===b));update();});
 document.getElementById('reset').addEventListener('click',()=>{saved={};boxes.forEach(b=>b.checked=false);try{localStorage.removeItem(KEY);}catch(e){}update();});
 update();
+
+// Look book: illustrated outfits
+const LOOKS=[
+ {day:'Fri 16 · Mon 26 flight',title:'Flight',bg:'#DCE6EC',scene:'',top:'jacket',topC:'#34404C',inner:'#EEE8DC',pants:'jeans',shoe:'sneaker',acc:['backpack'],items:['Jeans + plain tee','Light jacket — cabins are cold','Nike Air'],q:'men jeans white tee light jacket airport outfit'},
+ {day:'Sat 17 · Wed 21',title:'City heat — Marina Bay, KL',bg:'#F6E2C8',scene:'sun',top:'tee',topC:'#F4F1EA',pants:'chinos',shoe:'sneaker',acc:['cap','shades'],items:['Light chinos + breathable tee','Cap and sunglasses','Nike Air'],q:'men beige chinos white tee summer outfit'},
+ {day:'Sun 18 day',title:'Temples & river',bg:'#EDE3D2',scene:'sun',top:'tee',topC:'#5F8A75',pants:'chinos',shoe:'walk',acc:[],items:['Chinos keep knees covered','Tee with sleeves','Walking shoes — off at the temple'],q:'men olive tee beige chinos sneakers outfit'},
+ {day:'Sun 18 night',title:'Cruise dinner',bg:'#1C3A50',scene:'moon',top:'collared',topC:'#DCE6F0',pants:'navy',shoe:'crocs',acc:[],items:['Collared shirt + navy pants','Crocs on board'],q:'men light blue shirt navy chinos casual dinner outfit'},
+ {day:'Mon 19',title:'Batu Caves',bg:'#E8D9C3',scene:'sun',top:'tee',topC:'#A8442E',pants:'grey',shoe:'walk',acc:['backpack'],items:['Long pants — required at the temple','Tee covering shoulders','Walking shoes for 272 steps'],q:'men grey trousers maroon tee travel outfit'},
+ {day:'Tue 20 day · Thu 22 evening',title:'Cameron & Genting chill',bg:'#D9E4E0',scene:'mist',top:'jacket',topC:'#3E5A47',inner:'#E7E1D3',pants:'jeans',shoe:'walk',acc:[],items:['Fleece or jacket (15°C)','Jeans','Walking shoes for muddy trails'],q:'men green fleece jacket jeans hiking outfit'},
+ {day:'Tue 20 night',title:'KL premium dinner',bg:'#24323F',scene:'moon',top:'collared',topC:'#F5F3EE',pants:'navy',shoe:'sneaker',acc:[],items:['White collared shirt, tucked','Navy chinos','Clean Nike Air'],q:'men white shirt navy chinos white sneakers smart casual'},
+ {day:'Thu 22 morning',title:'White-water rafting',bg:'#CFE6EE',scene:'water',top:'tee',topC:'#2C7DA0',pants:'track',shoe:'crocs',acc:['helmet','vest'],items:['Quick-dry tee + track pants','Crocs, strap on','Helmet and life vest given there'],q:'men rafting outfit quick dry'},
+ {day:'Fri 23 · Sat 24',title:'Universal & long van day',bg:'#F3E6D6',scene:'sun',top:'tee',topC:'#E2714A',pants:'track',shoe:'crocs',acc:['cap','poncho'],items:['Quick-dry tee + track pants','Poncho for water rides','Crocs (Nike Air on the van day)'],q:'men theme park outfit track pants tee'},
+ {day:'Sun 25',title:'Zoo & Night Safari',bg:'#1E2B24',scene:'moon',top:'full',topC:'#5A6840',pants:'chinos',shoe:'walk',acc:['backpack'],items:['Full-sleeve tee for mosquitoes','Chinos','Walking shoes + repellent'],q:'men olive long sleeve tee chinos outfit'}
+];
+function lookSVG(o){
+ const SK='#B97E55',HAIR='#1E1A17';
+ const PC={jeans:'#3D5F8C',chinos:'#CDB48C',grey:'#5E646C',navy:'#27384A',track:'#2B313B'}[o.pants];
+ const night=o.scene==='moon';let g=`<rect width="200" height="300" fill="${o.bg}"/>`;
+ if(o.scene==='sun')g+='<circle cx="34" cy="36" r="15" fill="#F2B544" opacity=".85"/>';
+ if(night)g+='<circle cx="164" cy="34" r="12" fill="#F1E6C8"/><circle cx="170" cy="30" r="11" fill="'+o.bg+'"/>'+[[30,30],[54,60],[150,80],[24,110],[176,130]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.4" fill="#fff" opacity=".7"/>`).join('');
+ if(o.scene==='mist')g+=[40,96,210].map((y,i)=>`<rect x="${i%2?-20:60}" y="${y}" width="170" height="14" rx="7" fill="#fff" opacity=".55"/>`).join('');
+ if(o.scene==='water')g+='<path d="M0 238 Q25 228 50 238 T100 238 T150 238 T200 238 V300 H0Z" fill="#6FAEC6" opacity=".7"/><path d="M0 256 Q25 246 50 256 T100 256 T150 256 T200 256" fill="none" stroke="#fff" stroke-width="2" opacity=".6"/>';
+ g+='<ellipse cx="100" cy="284" rx="50" ry="6" fill="#000" opacity=".15"/>';
+ const has=a=>o.acc.includes(a);
+ if(has('backpack'))g+='<rect x="64" y="86" width="72" height="66" rx="12" fill="#3B3F45"/>';
+ // pants
+ g+=`<path d="M74 154 L126 154 L123 266 L103 266 L100 180 L97 266 L77 266 Z" fill="${PC}"/>`;
+ if(o.pants==='jeans')g+='<path d="M88 172 L87 264 M112 172 L113 264" stroke="#9DB4D3" stroke-width="1.2" stroke-dasharray="3 3"/>';
+ if(o.pants==='track')g+='<path d="M76 160 L78 264 M124 160 L122 264" stroke="#fff" stroke-width="2.2"/>';
+ if(o.pants==='chinos'||o.pants==='navy'||o.pants==='grey')g+='<path d="M87 186 L87 264 M113 186 L113 264" stroke="#000" stroke-opacity=".12" stroke-width="1.2"/>';
+ // shoes
+ const L='M76 264 L98 264 L99 282 L64 282 Q63 272 76 264 Z',R='M102 264 L124 264 Q137 272 136 282 L101 282 Z';
+ if(o.shoe==='sneaker')g+=`<path d="${L}" fill="#F7F6F2" stroke="#C9C6BE"/><path d="${R}" fill="#F7F6F2" stroke="#C9C6BE"/><path d="M68 280 H99 M101 280 H134" stroke="#9A968E" stroke-width="3"/><path d="M72 274 Q84 276 94 268 M106 268 Q116 276 130 274" stroke="#E2714A" stroke-width="2" fill="none"/>`;
+ if(o.shoe==='walk')g+=`<path d="${L}" fill="#6E747C"/><path d="${R}" fill="#6E747C"/><path d="M66 280 H99 M101 280 H135" stroke="#D8D2C4" stroke-width="4"/><path d="M84 268 L94 268 M84 272 L95 272 M106 268 L116 268 M105 272 L116 272" stroke="#D8D2C4" stroke-width="1.3"/>`;
+ if(o.shoe==='crocs')g+=`<path d="${L}" fill="#2E4C7E"/><path d="${R}" fill="#2E4C7E"/>`+[[76,272],[84,270],[92,272],[108,272],[116,270],[124,272]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.6" fill="#1C3155"/>`).join('')+'<path d="M95 268 Q100 260 98 278 M105 268 Q100 260 102 278" stroke="#1C3155" stroke-width="2" fill="none"/>';
+ // neck + torso
+ g+=`<rect x="92" y="62" width="16" height="22" fill="${SK}"/>`;
+ g+=`<path d="M76 78 Q100 74 124 78 L130 92 L127 160 L73 160 L70 92 Z" fill="${o.topC}"/>`;
+ if(o.top==='tee'||o.top==='full')g+=`<path d="M90 78 Q100 92 110 78 Z" fill="${SK}"/>`;
+ if(o.top==='collared')g+=`<path d="M93 78 L100 92 L107 78 Z" fill="${SK}"/><path d="M85 76 L100 92 L95 77 Z M115 76 L100 92 L105 77 Z" fill="#fff" stroke="#00000022"/><path d="M100 92 V156" stroke="#00000022"/>`+[104,118,132,146].map(y=>`<circle cx="100" cy="${y}" r="1.4" fill="#00000044"/>`).join('')+`<rect x="73" y="153" width="54" height="7" fill="#3A2A1E"/><rect x="96" y="153" width="8" height="7" fill="#C9A86A"/>`;
+ if(o.top==='jacket')g+=`<path d="M93 78 L107 78 L105 160 L95 160 Z" fill="${o.inner}"/><path d="M90 78 Q100 90 110 78" fill="${SK}"/><path d="M93 80 L95 160 M107 80 L105 160" stroke="#0005" stroke-width="1.5"/><path d="M84 76 L94 86 L93 78 Z M116 76 L106 86 L107 78 Z" fill="#0003"/>`;
+ // arms
+ const arm=(sx,sy,hx,hy)=>{const long=o.top==='full'||o.top==='jacket';const t=long?.93:.33;const ex=sx+(hx-sx)*t,ey=sy+(hy-sy)*t;
+  return `<line x1="${sx}" y1="${sy}" x2="${hx}" y2="${hy}" stroke="${SK}" stroke-width="14" stroke-linecap="round"/><line x1="${sx}" y1="${sy}" x2="${ex}" y2="${ey}" stroke="${o.topC}" stroke-width="18" stroke-linecap="round"/><circle cx="${hx}" cy="${hy+2}" r="7" fill="${SK}"/>`};
+ g+=arm(75,88,61,164)+arm(125,88,139,164);
+ if(has('backpack'))g+='<path d="M80 80 L82 150 M120 80 L118 150" stroke="#3B3F45" stroke-width="5"/>';
+ if(has('vest'))g+='<path d="M74 82 L93 82 L95 150 L72 150 Z M126 82 L107 82 L105 150 L128 150 Z" fill="#F07B1F"/><rect x="72" y="110" width="56" height="5" fill="#222"/><rect x="72" y="132" width="56" height="5" fill="#222"/>';
+ // head
+ g+=`<circle cx="81" cy="52" r="4" fill="${SK}"/><circle cx="119" cy="52" r="4" fill="${SK}"/><circle cx="100" cy="50" r="19" fill="${SK}"/>`;
+ g+=`<path d="M81 49 Q81 25 100 26 Q121 25 119 49 Q115 35 101 36 Q87 35 81 49 Z" fill="${HAIR}"/>`;
+ g+=`<path d="M89 45 L96 44 M104 44 L111 45" stroke="${HAIR}" stroke-width="2" stroke-linecap="round"/><circle cx="93" cy="51" r="1.9" fill="#222"/><circle cx="107" cy="51" r="1.9" fill="#222"/><path d="M94 60 Q100 64 106 60" stroke="#6B3A22" stroke-width="1.8" fill="none" stroke-linecap="round"/>`;
+ if(has('shades'))g+='<rect x="86" y="47" width="12" height="8" rx="2.5" fill="#1B1B1B"/><rect x="102" y="47" width="12" height="8" rx="2.5" fill="#1B1B1B"/><path d="M98 50 H102" stroke="#1B1B1B" stroke-width="2"/>';
+ if(has('cap'))g+='<path d="M80 45 Q80 24 100 24 Q120 24 120 45 Z" fill="#0F2A3C"/><ellipse cx="100" cy="44" rx="25" ry="4.5" fill="#1C4258"/>';
+ if(has('helmet'))g+='<path d="M79 47 Q79 21 100 21 Q121 21 121 47 Z" fill="#D9452B"/><path d="M90 24 V46 M110 24 V46" stroke="#0003" stroke-width="2"/><path d="M81 47 L92 67 M119 47 L108 67" stroke="#222" stroke-width="1.5"/>';
+ if(has('poncho'))g+='<path d="M100 70 L146 152 L138 168 L62 168 L54 152 Z" fill="#8CC8E8" fill-opacity=".45" stroke="#5FA8CF" stroke-opacity=".7"/>';
+ return `<svg viewBox="0 0 200 300" role="img" aria-label="${o.title} outfit">${g}</svg>`;
+}
+document.getElementById('lookgrid').innerHTML=LOOKS.map(o=>`<article class="look">${lookSVG(o)}<div><p class="eyebrow">${o.day}</p><h3>${o.title}</h3><ul>${o.items.map(i=>`<li>${i}</li>`).join('')}</ul><a href="https://www.pinterest.com/search/pins/?q=${encodeURIComponent(o.q)}" target="_blank" rel="noopener">See real photos ↗</a></div></article>`).join('');
 </script>
 </body></html>
