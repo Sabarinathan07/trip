@@ -107,8 +107,15 @@ footer{padding:36px 0;font-size:14px;color:var(--mute)}
   .bags,.groups,.two,.alert{grid-template-columns:1fr}
   th,td{padding:9px 10px;font-size:14px}
 }
+/* trip switcher */
+.tripbar{background:#081822;font-size:13px}
+.tripbar .wrap{display:flex;gap:4px;align-items:center;height:36px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.tripbar span{color:var(--gold);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:11px;margin-right:6px}
+.tripbar a{color:var(--pale);text-decoration:none;padding:4px 10px;border-radius:999px}
+.tripbar a:hover,.tripbar a.on{background:var(--panel);color:var(--light)}
 </style></head><body>
 
+<div class="tripbar"><div class="wrap"><span>My trips</span><a href="../trips.html">All trips</a><a href="../index.html">Singapore &amp; Malaysia '26</a><a href="../sabari/index.html" class="on">SG packing</a><a href="../europe-2027/index.html">Switzerland &amp; Paris '27</a><a href="../europe-2027/packing.html">Europe packing</a></div></div>
 <header><div class="wrap"><a class="brand" href="#top">Sabari's packing</a>
 <nav><a href="#counts">How many</a><a href="#shoes">Shoes</a><a href="#days">Day by day</a><a href="#looks">Looks</a><a href="#bags">Which bag</a><a href="#check">Checklist</a><a href="#dont">Don't pack</a><a href="../index.html">← Trip site</a></nav></div></header>
 
