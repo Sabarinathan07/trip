@@ -1,0 +1,114 @@
+/* Shared theme for every trip page — loaded after each page's own styles. */
+:root{
+  --dark:#10212B; --light:#FBF8F3; --coral:#E4572E; --gold:#F2B441; --mute:#5C6873;
+  --pale:#B7C5CD; --panel:#1A3341; --line:#ECE5D9; --stripe:#F6F1E8; --green:#2E8B62;
+  --surface:#FFFFFF; --ink-2:#2A3A45;
+  --r-lg:24px; --r-md:18px; --r-sm:12px;
+  --shadow-sm:0 1px 2px rgba(16,33,43,.06),0 2px 8px rgba(16,33,43,.04);
+  --shadow:0 1px 2px rgba(16,33,43,.05),0 10px 30px -8px rgba(16,33,43,.14);
+  --shadow-lg:0 30px 60px -20px rgba(16,33,43,.45);
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--light);color:var(--dark);font-family:'Inter',system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--gold);color:var(--dark)}
+a{text-underline-offset:3px;text-decoration-thickness:1.5px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.02em;font-variation-settings:"SOFT" 50,"opsz" 96}
+h1{letter-spacing:-.035em;line-height:1.02}
+h2{letter-spacing:-.025em}
+h3{letter-spacing:-.01em}
+
+/* eyebrow: small label with a leading rule */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;font-weight:700}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:currentColor;opacity:.8}
+
+/* ---------- trip switcher + header ---------- */
+.tripbar{background:linear-gradient(90deg,#0A1820,#12303C 60%,#0A1820);border-bottom:1px solid rgba(255,255,255,.06)}
+.tripbar .wrap{height:38px}
+.tripbar span{color:var(--gold)}
+.tripbar a{color:#C9D6DC;font-weight:500;transition:background .2s,color .2s}
+.tripbar a:hover{background:rgba(255,255,255,.08);color:#fff}
+.tripbar a.on{background:var(--gold);color:var(--dark);font-weight:700}
+header{background:rgba(251,248,243,.82)!important;color:var(--dark)!important;backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgba(16,33,43,.08);box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+header .brand{color:var(--dark)!important;font-family:'Fraunces',Georgia,serif;font-weight:700;letter-spacing:-.02em}
+header nav a{color:var(--mute)!important;font-weight:600;font-size:14px;transition:background .2s,color .2s}
+header nav a:hover{background:rgba(16,33,43,.06)!important;color:var(--dark)!important}
+header nav a.on{background:var(--dark)!important;color:#fff!important}
+
+/* ---------- sections ---------- */
+section.dark{background:radial-gradient(1200px 500px at 85% -10%,rgba(228,87,46,.16),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(46,139,98,.14),transparent 60%),var(--dark)}
+section.alt,section[style*="--stripe"]{background:var(--stripe)!important}
+.hero{position:relative;overflow:hidden}
+section.hero,.hero.dark{background:radial-gradient(900px 600px at 100% 0%,rgba(242,180,65,.20),transparent 55%),radial-gradient(800px 600px at 0% 100%,rgba(228,87,46,.22),transparent 60%),linear-gradient(160deg,#0E1D26 0%,#132B37 60%,#0E1D26 100%)}
+.hero h1{color:#fff}
+.hero .ph,.trip img{border-radius:28px!important;box-shadow:var(--shadow-lg);outline:1px solid rgba(255,255,255,.08)}
+.hero figcaption{opacity:.75}
+
+/* hero stats */
+.count div,.stats div{background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(6px);border-radius:16px!important}
+.count b,.stats b{font-family:'Fraunces',Georgia,serif;color:var(--gold)!important;letter-spacing:-.02em}
+.alert div{background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.12);border-top:3px solid var(--coral);border-radius:16px!important;color:#E9EEF1!important}
+.alert b{color:#fff}
+
+/* ---------- photos ---------- */
+.ph{border-radius:var(--r-md)!important;background:linear-gradient(135deg,#1A3341,#244656)!important}
+.ph img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.day:hover>figure .ph img,.gallery figure:hover .ph img,.places figure:hover .ph img{transform:scale(1.04)}
+figcaption{font-size:12px}
+.gallery figcaption{font-weight:600}
+
+/* ---------- surfaces (cards of every kind) ---------- */
+.card,.pf,.q,.look,.place,.beds div,.day,.group,.table{border:0!important;box-shadow:var(--shadow)!important}
+.card,.pf,.q,.look,.place,.beds div{background:var(--surface);border-radius:var(--r-md)!important;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.look:hover,.place:hover,.q:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(16,33,43,.06),0 18px 40px -12px rgba(16,33,43,.22)!important}
+.dark .card,.dark .group,.dark .check,.dark .bag{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03))!important;border:1px solid rgba(255,255,255,.09)!important;box-shadow:none!important;border-radius:var(--r-md)!important}
+.dark .card h3,.dark .bag h3,.dark .check h3{color:#fff}
+.check{border-radius:var(--r-md)!important;box-shadow:var(--shadow)}
+.day{background:var(--surface)!important;border-radius:var(--r-lg)!important}
+.day h3{letter-spacing:-.02em}
+.group{background:var(--surface);border-radius:var(--r-md)!important}
+
+/* tips: soft callout instead of a solid block */
+.tip{background:#FFF3EC!important;color:var(--ink-2)!important;border:0!important;border-left:4px solid var(--coral)!important;border-radius:0 var(--r-sm) var(--r-sm) 0!important;padding:12px 16px!important;font-size:14.5px!important}
+.tip b{color:var(--coral)}
+
+/* ---------- tables ---------- */
+.table{border-radius:var(--r-md)!important;background:var(--surface)!important;overflow:auto}
+th{background:var(--stripe)!important;color:var(--mute)!important;font-size:11px!important;letter-spacing:.14em!important;font-weight:700;border-bottom:1px solid var(--line)}
+td{color:var(--dark);border-top:1px solid var(--line)!important}
+tr:nth-child(odd) td{background:transparent!important}
+tbody tr:hover td,table tr:hover td{background:#FFFBF5!important}
+tr.total td{background:var(--dark)!important;color:#fff!important}
+tr.total:hover td{background:var(--dark)!important}
+td a{font-weight:600;text-decoration:none}
+td a:hover{text-decoration:underline}
+
+/* ---------- pills, tags, buttons ---------- */
+.tag{border-radius:999px;letter-spacing:.06em!important}
+.tag.must,.tag.done{background:var(--green)!important;color:#fff!important}
+.tag.nice{background:#F7E7C6!important;color:#6B4E12!important}
+.tag.skip{background:transparent!important;color:var(--mute)!important;box-shadow:inset 0 0 0 1.5px #CBBFA8!important}
+a.btn,.btns a.main,.place .go a.map{background:var(--coral)!important;color:#fff!important;border:0!important;box-shadow:0 6px 16px -6px rgba(228,87,46,.6);transition:transform .2s,box-shadow .2s}
+a.btn:hover,.btns a.main:hover,.place .go a.map:hover{transform:translateY(-1px);box-shadow:0 10px 20px -8px rgba(228,87,46,.7)}
+a.btn.ghost{background:transparent!important;color:var(--coral)!important;box-shadow:inset 0 0 0 2px var(--coral)!important}
+.filters button.on{background:var(--dark)!important}
+
+/* ---------- checklists ---------- */
+.bar{background:var(--line)!important;height:8px!important}
+.dark .bar{background:rgba(255,255,255,.12)!important}
+.bar i{background:linear-gradient(90deg,var(--coral),var(--gold))!important}
+.todo input{border-radius:7px!important;transition:background .15s,transform .15s}
+.todo input:active{transform:scale(.9)}
+.due{border-radius:999px}
+
+/* ---------- footer ---------- */
+footer{background:linear-gradient(160deg,#0E1D26,#132B37)!important;color:#C9D6DC!important}
+footer a{color:var(--gold)!important}
+footer .lead,footer h2{color:#fff}
+
+/* ---------- motion preference ---------- */
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.ph img{transform:none!important}}
+@media (max-width:900px){
+  .hero .ph,.trip img{border-radius:20px!important}
+  .tripbar .wrap{height:36px}
+}
